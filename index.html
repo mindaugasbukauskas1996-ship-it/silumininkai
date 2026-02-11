@@ -105,12 +105,51 @@
     .modal p { margin: 0 0 10px; font-size: 13px; color: #374151; }
     .modal .row2 { display: grid; grid-template-columns: 1fr; gap: 8px; }
     .modal small { color: #6b7280; }
-  </style>
+  
+  /* --- Panel collapse --- */
+  .panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .panel-title {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    font-weight: 600;
+    font-size: 14px;
+    color: #111827;
+  }
+  .icon-btn {
+    width: 42px;
+    height: 38px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    color: #111827;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .panel.collapsed {
+    padding: 10px;
+  }
+  .panel.collapsed .panel-body {
+    display: none;
+  }
+
+</style>
 </head>
 <body>
   <div id="map"></div>
 
-  <div class="panel">
+  <div class="panel" id="panel">
+  <div class="panel-header">
+    <div class="panel-title">Šilumininkų žemėlapis</div>
+    <button class="icon-btn" id="togglePanel" title="Suskleisti / išskleisti">☰</button>
+  </div>
+
+  <div class="panel-body">
+
     <div class="row">
       <div>
         <label for="tech">Filtras pagal techniką</label>
@@ -147,6 +186,9 @@
       Paspausk tašką – matysi techniką ir telefono numerį. Admin režime: paspausk tašką ir galėsi perpriskirti techniką arba ištrinti adresą.
     </div>
   </div>
+  </div>
+</div>
+
 
   <!-- Admin login modal -->
   <div class="modal-backdrop" id="modalBack">
@@ -177,13 +219,12 @@
       Firebase Console -> Project settings -> Your apps -> SDK setup (Config)
     ******************************************************************/
     const firebaseConfig = {
-      apiKey: "AIzaSyB3JtTd_uiBM229qT-PRuoFxPjL-BgEjYM",
-      authDomain: "silumininkai-map.firebaseapp.com",
-      projectId: "silumininkai-map",
-      storageBucket: "silumininkai-map.firebasestorage.app",
-      messagingSenderId: "564894158002",
-      appId: "1:564894158002:web:6878f5433ce4f2baa90dab",
-      measurementId: "G-ZPSRM7GBDD"
+      apiKey: "PAKEISK",
+      authDomain: "PAKEISK",
+      projectId: "PAKEISK",
+      storageBucket: "PAKEISK",
+      messagingSenderId: "PAKEISK",
+      appId: "PAKEISK"
     };
 
     firebase.initializeApp(firebaseConfig);
@@ -215,7 +256,31 @@
     const qInput = document.getElementById('q');
     const modeSelect = document.getElementById('mode');
 
-    // Admin modal
+    
+
+    // Panel hide/show (mobile friendly)
+    const panel = document.getElementById('panel');
+    const toggleBtn = document.getElementById('togglePanel');
+
+    function setPanelCollapsed(collapsed) {
+      panel.classList.toggle('collapsed', collapsed);
+      localStorage.setItem('panelCollapsed', collapsed ? '1' : '0');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      const isCollapsed = panel.classList.contains('collapsed');
+      setPanelCollapsed(!isCollapsed);
+    });
+
+    // Default: phone -> collapsed, desktop -> expanded (unless user chose before)
+    const saved = localStorage.getItem('panelCollapsed');
+    if (saved === null) {
+      const isPhone = window.matchMedia('(max-width: 720px)').matches;
+      setPanelCollapsed(isPhone);
+    } else {
+      setPanelCollapsed(saved === '1');
+    }
+// Admin modal
     const modalBack = document.getElementById('modalBack');
     const adminEmail = document.getElementById('adminEmail');
     const adminCode = document.getElementById('adminCode');
