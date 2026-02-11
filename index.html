@@ -248,29 +248,42 @@
     // Cluster groups (one per technikas, to avoid mixed clustering)
     const TECH_CLUSTER_GROUPS = {}; // key -> L.markerClusterGroup
 
-    function makeClusterIcon(color, count) {
-      // Simple colored circle with count
+    function makeClusterIcon(technikasName, color, count) {
+      // Colored circle with count. Add a small deterministic offset per technikas so
+      // different technicians' clusters don't visually stack on top of each other.
+      let h = 0;
+      const s = String(technikasName || "");
+      for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
+      const dx = (h % 17) - 8;              // -8..8
+      const dy = ((h >>> 8) % 17) - 8;      // -8..8
+
       const html = `<div style="
           width:44px;height:44px;border-radius:999px;
           background:${color};color:#fff;
           display:flex;align-items:center;justify-content:center;
           font-weight:700;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
-          border:3px solid rgba(255,255,255,0.9);
+          border:3px solid rgba(255,255,255,0.92);
           box-shadow:0 6px 18px rgba(0,0,0,0.22);
+          transform: translate(${dx}px, ${dy}px);
         ">${count}</div>`;
-      return L.divIcon({ html, className: "", iconSize: [44,44] });
+      return L.divIcon({ html, className: "tech-cluster-icon", iconSize: [44,44] });
     }
 
-    function ensureCluster(key, color) {
+    function ensureCluster(key, technikasName) {
       if (TECH_CLUSTER_GROUPS[key]) return TECH_CLUSTER_GROUPS[key];
+
+      // Key can contain region suffixes (e.g. "Name|Palanga"). Cluster color must follow the technician.
+      const baseTech = String(technikasName || key || "").split("|")[0].trim();
+
       const g = L.markerClusterGroup({
         showCoverageOnHover: false,
         spiderfyOnMaxZoom: true,
         disableClusteringAtZoom: 18,
         iconCreateFunction: function (cl) {
-          return makeClusterIcon(color, cl.getChildCount());
+          return makeClusterIcon(baseTech, colorFor(baseTech), cl.getChildCount());
         }
       });
+
       TECH_CLUSTER_GROUPS[key] = g;
       map.addLayer(g);
       return g;
@@ -462,7 +475,7 @@
         const technikas = (item.technikas || "").trim();
         const c = colorFor(technikas || "");
         const key = clusterKeyFor(item);
-        const group = ensureCluster(key, c);
+        const group = ensureCluster(key, technikas);
 
         const marker = L.circleMarker([item.lat, item.lon], {
           radius: 7,
@@ -569,7 +582,7 @@
 
         const technikas = (item.technikas || "").trim();
         const c = colorFor(technikas || "");
-        const group = ensureCluster(entry.key, c);
+        const group = ensureCluster(entry.key, technikas);
         group.addLayer(entry.layer);
         activeKeys.add(entry.key);
 
@@ -639,7 +652,7 @@
       for (const entry of LAYERS) {
         const technikas = (entry.item.technikas || "").trim();
         const c = colorFor(technikas || "");
-        const group = ensureCluster(entry.key, c);
+        const group = ensureCluster(entry.key, technikas);
         group.addLayer(entry.layer);
         activeKeys.add(entry.key);
         bounds.extend([entry.item.lat, entry.item.lon]);
