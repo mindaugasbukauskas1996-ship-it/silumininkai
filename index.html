@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Šilumininkų žemėlapis</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+
+  <!-- Firebase (compat for simple setup) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+  <style>
+    html, body { height: 100%; margin: 0; }
+    #map { height: 100%; width: 100%; }
+
+    .panel {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      z-index: 1000;
+      background: rgba(255,255,255,0.95);
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    @media (min-width: 720px) {
+      .row { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    label { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; font-size: 13px; }
+    select, input {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid #d7d7d7;
+      font-size: 15px;
+      outline: none;
+    }
+    .btns { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+    button {
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 0;
+      background: #111827;
+      color: white;
+      font-size: 14px;
+    }
+    button.secondary { background: #e5e7eb; color: #111827; }
+    .hint {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      font-size: 12px;
+      color: #374151;
+      margin-top: 6px;
+    }
+    .status {
+      margin-top: 6px;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      font-size: 12px;
+      color: #111827;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .pill {
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+    }
+
+    /* Admin modal */
+    .modal-backdrop {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.35);
+      display: none; align-items: center; justify-content: center; z-index: 2000;
+      padding: 14px;
+    }
+    .modal {
+      width: 100%;
+      max-width: 520px;
+      background: #fff;
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.25);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    }
+    .modal h3 { margin: 0 0 8px; font-size: 16px; }
+    .modal p { margin: 0 0 10px; font-size: 13px; color: #374151; }
+    .modal .row2 { display: grid; grid-template-columns: 1fr; gap: 8px; }
+    .modal small { color: #6b7280; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <div class="panel">
+    <div class="row">
+      <div>
+        <label for="tech">Filtras pagal techniką</label>
+        <select id="tech">
+          <option value="__ALL__">Visi technikai</option>
+        </select>
+      </div>
+      <div>
+        <label for="q">Paieška (adresas / technikas / tel.)</label>
+        <input id="q" type="search" placeholder="Pvz. Alksnynės 5 arba Arūnas" />
+      </div>
+      <div>
+        <label for="mode">Režimas</label>
+        <select id="mode">
+          <option value="view">Peržiūra</option>
+          <option value="admin">Admin (reikia kodo)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="btns">
+      <button id="fit">Rodyti visus taškus</button>
+      <button id="locate" class="secondary">Mano vieta</button>
+      <button id="logout" class="secondary" style="display:none;">Atsijungti (admin)</button>
+    </div>
+
+    <div class="status">
+      <span class="pill" id="conn">DB: jungiamasi...</span>
+      <span class="pill" id="count">Taškų: -</span>
+      <span class="pill" id="who">Vartotojas: svečias</span>
+    </div>
+
+    <div class="hint">
+      Paspausk tašką – matysi techniką ir telefono numerį. Admin režime: paspausk tašką ir galėsi perpriskirti techniką arba ištrinti adresą.
+    </div>
+  </div>
+
+  <!-- Admin login modal -->
+  <div class="modal-backdrop" id="modalBack">
+    <div class="modal">
+      <h3>Admin prisijungimas</h3>
+      <p>Įvesk admin kodą. Šis kodas naudojamas kaip slaptažodis Firebase admin paskyrai.</p>
+      <div class="row2">
+        <div>
+          <label for="adminEmail">Admin el. paštas</label>
+          <input id="adminEmail" placeholder="pvz. admin@jusu-imone.lt" />
+          <small>Šį el. paštą susikursi Firebase Authentication.</small>
+        </div>
+        <div>
+          <label for="adminCode">Kodas</label>
+          <input id="adminCode" type="password" placeholder="kodas / slaptažodis" />
+        </div>
+        <div class="btns">
+          <button id="loginBtn">Prisijungti</button>
+          <button class="secondary" id="cancelBtn">Atšaukti</button>
+        </div>
+        <small id="loginErr"></small>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /************** 1) ĮRAŠYK SAVO FIREBASE KONFIGĄ ČIA ***************
+      Firebase Console -> Project settings -> Your apps -> SDK setup (Config)
+    ******************************************************************/
+    const firebaseConfig = {
+      apiKey: "AIzaSyB3JtTd_uiBM229qT-PRuoFxPjL-BgEjYM",
+      authDomain: "silumininkai-map.firebaseapp.com",
+      projectId: "silumininkai-map",
+      storageBucket: "silumininkai-map.firebasestorage.app",
+      messagingSenderId: "564894158002",
+      appId: "1:564894158002:web:6878f5433ce4f2baa90dab",
+      measurementId: "G-ZPSRM7GBDD"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    const auth = firebase.auth();
+
+    const connEl = document.getElementById('conn');
+    const countEl = document.getElementById('count');
+    const whoEl = document.getElementById('who');
+    const logoutBtn = document.getElementById('logout');
+
+    // Map init
+    const map = L.map('map', { zoomControl: true, preferCanvas: true }).setView([55.7033, 21.1443], 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+
+    // Cluster group
+    const cluster = L.markerClusterGroup({
+      showCoverageOnHover: false,
+      spiderfyOnMaxZoom: true,
+      disableClusteringAtZoom: 18
+    });
+    map.addLayer(cluster);
+
+    // UI
+    const techSelect = document.getElementById('tech');
+    const qInput = document.getElementById('q');
+    const modeSelect = document.getElementById('mode');
+
+    // Admin modal
+    const modalBack = document.getElementById('modalBack');
+    const adminEmail = document.getElementById('adminEmail');
+    const adminCode = document.getElementById('adminCode');
+    const loginBtn = document.getElementById('loginBtn');
+    const cancelBtn = document.getElementById('cancelBtn');
+    const loginErr = document.getElementById('loginErr');
+
+    // State
+    let TECH_COLORS = {};        // loaded from Firestore meta/colors doc or computed
+    let ALL_DOCS = [];           // {id, data}
+    let LAYERS = [];             // {id, item, layer}
+    let IS_ADMIN = false;
+
+    // Helpers
+    function colorFor(technikas) {
+      if (TECH_COLORS[technikas]) return TECH_COLORS[technikas];
+      // stable fallback color
+      let h = 0;
+      for (let i=0; i<technikas.length; i++) h = (h*31 + technikas.charCodeAt(i)) >>> 0;
+      const hue = h % 360;
+      return `hsl(${hue}, 70%, 45%)`;
+    }
+
+    function openAdminModal() {
+      loginErr.textContent = "";
+      modalBack.style.display = "flex";
+      adminEmail.value = localStorage.getItem("adminEmail") || "";
+      adminCode.value = "";
+      adminCode.focus();
+    }
+    function closeAdminModal() {
+      modalBack.style.display = "none";
+    }
+
+    // Auth state
+    auth.onAuthStateChanged(user => {
+      IS_ADMIN = !!user;
+      whoEl.textContent = "Vartotojas: " + (user ? (user.email || "admin") : "svečias");
+      logoutBtn.style.display = user ? "inline-block" : "none";
+    });
+
+    logoutBtn.addEventListener('click', async () => {
+      await auth.signOut();
+      modeSelect.value = "view";
+      applyFilters();
+    });
+
+    // Mode switch
+    modeSelect.addEventListener('change', () => {
+      if (modeSelect.value === "admin") {
+        if (!auth.currentUser) openAdminModal();
+      } else {
+        applyFilters();
+      }
+    });
+
+    cancelBtn.addEventListener('click', () => {
+      closeAdminModal();
+      modeSelect.value = "view";
+    });
+
+    loginBtn.addEventListener('click', async () => {
+      loginErr.textContent = "";
+      try {
+        const email = adminEmail.value.trim();
+        const pass = adminCode.value;
+        if (!email || !pass) throw new Error("Įvesk el. paštą ir kodą.");
+        localStorage.setItem("adminEmail", email);
+        await auth.signInWithEmailAndPassword(email, pass);
+        closeAdminModal();
+        applyFilters();
+      } catch (e) {
+        loginErr.textContent = "Prisijungti nepavyko: " + (e.message || e);
+      }
+    });
+
+    // Realtime: listen to addresses
+    connEl.textContent = "DB: jungiamasi...";
+    db.collection("addresses").onSnapshot((snap) => {
+      connEl.textContent = "DB: prisijungta";
+      ALL_DOCS = [];
+      snap.forEach(doc => {
+        const d = doc.data();
+        ALL_DOCS.push({ id: doc.id, ...d });
+      });
+      rebuildTechFilter();
+      rebuildMarkers();
+      applyFilters(false); // don't auto-fit every time while typing
+      countEl.textContent = "Taškų: " + ALL_DOCS.length;
+    }, (err) => {
+      connEl.textContent = "DB: klaida (" + (err.code || "ERR") + ")";
+      console.error(err);
+    });
+
+    // Optional: colors map stored in firestore (doc: meta/colors)
+    db.collection("meta").doc("colors").onSnapshot((doc) => {
+      if (doc.exists) TECH_COLORS = doc.data() || {};
+      rebuildTechFilter();
+      rebuildMarkers();
+      applyFilters(false);
+    });
+
+    function rebuildTechFilter() {
+      const current = techSelect.value;
+      // Clear options except first
+      techSelect.innerHTML = '<option value="__ALL__">Visi technikai</option>';
+      const techs = Array.from(new Set(ALL_DOCS.map(d => d.technikas).filter(Boolean))).sort();
+      for (const t of techs) {
+        const opt = document.createElement('option');
+        opt.value = t;
+        opt.textContent = t;
+        techSelect.appendChild(opt);
+      }
+      // restore selection if possible
+      const exists = Array.from(techSelect.options).some(o => o.value === current);
+      techSelect.value = exists ? current : "__ALL__";
+    }
+
+    function rebuildMarkers() {
+      cluster.clearLayers();
+      LAYERS = [];
+
+      let bounds = L.latLngBounds();
+
+      for (const item of ALL_DOCS) {
+        if (!item.lat || !item.lon) continue;
+
+        const c = colorFor(item.technikas || "");
+        const marker = L.circleMarker([item.lat, item.lon], {
+          radius: 7,
+          color: c,
+          fillColor: c,
+          fillOpacity: 0.9,
+          weight: 2
+        });
+
+        const telHtml = item.tel ? (`Tel: <a href="tel:${item.tel}">${item.tel}</a>`) : "";
+        marker.bindPopup(() => {
+          const base = `
+            <b>${item.adresas || ""}</b><br>
+            Technikas: ${item.technikas || ""}<br>
+            ${telHtml}
+          `;
+          if (!auth.currentUser || modeSelect.value !== "admin") return base;
+
+          // Admin controls inside popup
+          const techOptions = Array.from(new Set(ALL_DOCS.map(d => d.technikas).filter(Boolean))).sort()
+            .map(t => `<option value="${t}" ${t===item.technikas ? "selected":""}>${t}</option>`)
+            .join("");
+
+          return `
+            ${base}
+            <hr style="margin:10px 0;">
+            <div style="font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial; font-size:13px;">
+              <div style="margin-bottom:8px;"><b>Admin veiksmai</b></div>
+              <label>Priskirti techniką:</label><br>
+              <select id="tech_${item.id}" style="width:100%; padding:8px; border-radius:10px; border:1px solid #ddd; margin-top:4px;">
+                ${techOptions}
+              </select>
+              <div style="display:flex; gap:8px; margin-top:8px;">
+                <button id="save_${item.id}" style="flex:1; padding:9px; border-radius:10px; border:0; background:#111827; color:#fff;">Išsaugoti</button>
+                <button id="del_${item.id}" style="flex:1; padding:9px; border-radius:10px; border:0; background:#b91c1c; color:#fff;">Ištrinti</button>
+              </div>
+              <small id="msg_${item.id}" style="display:block; margin-top:6px; color:#374151;"></small>
+            </div>
+          `;
+        });
+
+        marker.on('popupopen', () => {
+          if (!auth.currentUser || modeSelect.value !== "admin") return;
+
+          const saveBtn = document.getElementById(`save_${item.id}`);
+          const delBtn = document.getElementById(`del_${item.id}`);
+          const sel = document.getElementById(`tech_${item.id}`);
+          const msg = document.getElementById(`msg_${item.id}`);
+
+          if (saveBtn) {
+            saveBtn.addEventListener('click', async () => {
+              msg.textContent = "Saugojama...";
+              try {
+                await db.collection("addresses").doc(item.id).update({ technikas: sel.value });
+                msg.textContent = "Išsaugota.";
+              } catch (e) {
+                msg.textContent = "Klaida: " + (e.message || e);
+              }
+            });
+          }
+
+          if (delBtn) {
+            delBtn.addEventListener('click', async () => {
+              if (!confirm("Ištrinti šį adresą?")) return;
+              msg.textContent = "Trinama...";
+              try {
+                await db.collection("addresses").doc(item.id).delete();
+                msg.textContent = "Ištrinta.";
+              } catch (e) {
+                msg.textContent = "Klaida: " + (e.message || e);
+              }
+            });
+          }
+        });
+
+        cluster.addLayer(marker);
+        LAYERS.push({ id: item.id, item, layer: marker });
+        bounds.extend([item.lat, item.lon]);
+      }
+
+      // initial fit
+      if (bounds.isValid()) map.fitBounds(bounds.pad(0.12));
+    }
+
+    function applyFilters(autoFit=true) {
+      const tech = techSelect.value;
+      const q = (qInput.value || "").trim().toLowerCase();
+
+      cluster.clearLayers();
+      let bounds = L.latLngBounds();
+      let count = 0;
+
+      for (const entry of LAYERS) {
+        const item = entry.item;
+
+        if (tech !== "__ALL__" && item.technikas !== tech) continue;
+
+        if (q) {
+          const hay = `${item.adresas || ""} ${item.technikas || ""} ${item.tel || ""}`.toLowerCase();
+          if (!hay.includes(q)) continue;
+        }
+
+        cluster.addLayer(entry.layer);
+        bounds.extend([item.lat, item.lon]);
+        count++;
+      }
+
+      countEl.textContent = "Taškų: " + count;
+
+      if (autoFit && count > 0 && bounds.isValid()) map.fitBounds(bounds.pad(0.15));
+    }
+
+    techSelect.addEventListener('change', () => applyFilters(true));
+    qInput.addEventListener('input', () => {
+      window.clearTimeout(window.__t);
+      window.__t = window.setTimeout(() => applyFilters(false), 180);
+    });
+
+    document.getElementById('fit').addEventListener('click', () => {
+      techSelect.value = "__ALL__";
+      qInput.value = "";
+      countEl.textContent = "Taškų: " + ALL_DOCS.length;
+      cluster.clearLayers();
+      for (const entry of LAYERS) cluster.addLayer(entry.layer);
+      // fit
+      let bounds = L.latLngBounds();
+      for (const entry of LAYERS) bounds.extend([entry.item.lat, entry.item.lon]);
+      if (bounds.isValid()) map.fitBounds(bounds.pad(0.12));
+    });
+
+    document.getElementById('locate').addEventListener('click', () => {
+      if (!navigator.geolocation) return alert('Naršyklė nepalaiko geolokacijos.');
+      navigator.geolocation.getCurrentPosition((pos) => {
+        const lat = pos.coords.latitude;
+        const lon = pos.coords.longitude;
+        const p = L.circleMarker([lat, lon], { radius: 9, weight: 2, fillOpacity: 0.4 }).addTo(map);
+        p.bindPopup('Mano vieta').openPopup();
+        map.setView([lat, lon], 16);
+        setTimeout(() => map.removeLayer(p), 15000);
+      }, (err) => alert('Nepavyko gauti vietos: ' + err.message), { enableHighAccuracy: true, timeout: 8000 });
+    });
+
+    // Address search control (geocoder)
+    L.Control.geocoder({ defaultMarkGeocode: false })
+      .on('markgeocode', (e) => map.fitBounds(e.geocode.bbox))
+      .addTo(map);
+  </script>
+</body>
+</html>
