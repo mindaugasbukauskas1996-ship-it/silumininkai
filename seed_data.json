@@ -1,0 +1,3377 @@
+{
+  "meta": {
+    "count": 420,
+    "note": "Generated from silumininkai_geocoded.csv; removed 'Akademijos g. 4, Vilnius' for Vaidas Andriušis"
+  },
+  "colors": {
+    "Arūnas Jurgutis": "hsl(166, 70%, 45%)",
+    "Dimitrj Ryžkov": "hsl(5, 70%, 45%)",
+    "Jurijus Laškovas": "hsl(70, 70%, 45%)",
+    "Pranas Chmeliovas": "hsl(234, 70%, 45%)",
+    "Sergej Kotikov": "hsl(119, 70%, 45%)",
+    "Vaidas Andriušis": "hsl(177, 70%, 45%)",
+    "Vytautas Žilinskas": "hsl(209, 70%, 45%)"
+  },
+  "addresses": [
+    {
+      "id": "a_89b52dfbebdcebe2",
+      "adresas": "Alksnynės g. 3, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6707224,
+      "lon": 21.1693202
+    },
+    {
+      "id": "a_872c8eb26cf5f54f",
+      "adresas": "Alksnynės g. 4, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6713128,
+      "lon": 21.168903
+    },
+    {
+      "id": "a_1cc33802fc64b564",
+      "adresas": "Alksnynės g. 4A, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.67169,
+      "lon": 21.16935
+    },
+    {
+      "id": "a_70cb3e6228d632e7",
+      "adresas": "Alksnynės g. 5, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6702593,
+      "lon": 21.1688906
+    },
+    {
+      "id": "a_7461ab041955fce9",
+      "adresas": "Alksnynės g. 5A, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6698263,
+      "lon": 21.1691738
+    },
+    {
+      "id": "a_2295901f6c98ce3e",
+      "adresas": "Alksnynės g. 5B, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6698024,
+      "lon": 21.1699284
+    },
+    {
+      "id": "a_f41473fb2caf87b2",
+      "adresas": "Alksnynės g. 6, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6715303,
+      "lon": 21.1679832
+    },
+    {
+      "id": "a_c29676dd7ee85c14",
+      "adresas": "Alksnynės g. 6A, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6719015,
+      "lon": 21.1684322
+    },
+    {
+      "id": "a_752b40cc5a23fe81",
+      "adresas": "Alksnynės g. 7, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6707747,
+      "lon": 21.1683136
+    },
+    {
+      "id": "a_1396be81c8ce9a47",
+      "adresas": "Alksnynės g. 8, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6717458,
+      "lon": 21.1670448
+    },
+    {
+      "id": "a_436b5af1d976397f",
+      "adresas": "Alksnynės g. 9, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6710752,
+      "lon": 21.1670049
+    },
+    {
+      "id": "a_bdad52ad92ec7a0f",
+      "adresas": "Alksnynės g. 13, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6701614,
+      "lon": 21.1676918
+    },
+    {
+      "id": "a_c5d246b9a06e6cb8",
+      "adresas": "Alksnynės g. 15, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6697048,
+      "lon": 21.1683579
+    },
+    {
+      "id": "a_18163f9fbbb11181",
+      "adresas": "Alksnynės g. 15A, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6692718,
+      "lon": 21.168641
+    },
+    {
+      "id": "a_f1ae1cc6731d7538",
+      "adresas": "Alksnynės g. 15B, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6691852,
+      "lon": 21.1693573
+    },
+    {
+      "id": "a_0fcd89615b512c64",
+      "adresas": "Baltijos pr. 107, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6844346,
+      "lon": 21.1573562
+    },
+    {
+      "id": "a_a33e006b4fb5938c",
+      "adresas": "Kalnupės g. 7, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6754111,
+      "lon": 21.1502938
+    },
+    {
+      "id": "a_556c3fd648c3a50f",
+      "adresas": "Kalnupės g. 9, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6755469,
+      "lon": 21.1513446
+    },
+    {
+      "id": "a_8ce37c5a67232cfc",
+      "adresas": "Kalnupės g. 11A, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6765308,
+      "lon": 21.1514877
+    },
+    {
+      "id": "a_3808063dbc15a259",
+      "adresas": "Naikupės g. 17A, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6794494,
+      "lon": 21.1536133
+    },
+    {
+      "id": "a_ab2a2cba287b21c9",
+      "adresas": "Naikupės g. 19, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6793275,
+      "lon": 21.1550999
+    },
+    {
+      "id": "a_a3379da57c5822d1",
+      "adresas": "Pietinė g. 3, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6672,
+      "lon": 21.1717012
+    },
+    {
+      "id": "a_3ac6066d2a5975ba",
+      "adresas": "Pietinė g. 9, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6678757,
+      "lon": 21.1702885
+    },
+    {
+      "id": "a_268c35c4fabd0acb",
+      "adresas": "Pietinė g. 13, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6674904,
+      "lon": 21.1695528
+    },
+    {
+      "id": "a_864b84979e77c8de",
+      "adresas": "Pietinė g. 17, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6665726,
+      "lon": 21.1693858
+    },
+    {
+      "id": "a_72a4b89e80daa1c0",
+      "adresas": "Pietinė g. 18, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6663002,
+      "lon": 21.1685762
+    },
+    {
+      "id": "a_08f9b2a92c291901",
+      "adresas": "Poilsio g. 14, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6757903,
+      "lon": 21.1624893
+    },
+    {
+      "id": "a_ebe238ec862a65a8",
+      "adresas": "Poilsio g. 16, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.675645,
+      "lon": 21.1615971
+    },
+    {
+      "id": "a_284753e741d7e846",
+      "adresas": "Poilsio g. 20, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6749833,
+      "lon": 21.1621985
+    },
+    {
+      "id": "a_34f6f30290db90c9",
+      "adresas": "Poilsio g. 31, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6760367,
+      "lon": 21.1641614
+    },
+    {
+      "id": "a_9d13bdb8892d227f",
+      "adresas": "Poilsio g. 35, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.675196,
+      "lon": 21.1636345
+    },
+    {
+      "id": "a_06a37bbe5d75a6fe",
+      "adresas": "Poilsio g. 37, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6746581,
+      "lon": 21.1641058
+    },
+    {
+      "id": "a_c1d1c59ad1b9a774",
+      "adresas": "Poilsio g. 39, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6740595,
+      "lon": 21.1643319
+    },
+    {
+      "id": "a_cf3e2b8a6daa9937",
+      "adresas": "Poilsio g. 43, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6733461,
+      "lon": 21.1647735
+    },
+    {
+      "id": "a_2bc938763c0d8ed0",
+      "adresas": "Reikjaviko g. 14, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6671342,
+      "lon": 21.1758356
+    },
+    {
+      "id": "a_332ff44149c30dec",
+      "adresas": "Statybininkų pr. 33, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6722814,
+      "lon": 21.1684816
+    },
+    {
+      "id": "a_25b2a9e7818ab255",
+      "adresas": "Statybininkų pr. 35, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6721189,
+      "lon": 21.1674854
+    },
+    {
+      "id": "a_b041b4c9d6db95b6",
+      "adresas": "Šturmanų g. 20, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6785752,
+      "lon": 21.1628912
+    },
+    {
+      "id": "a_2e17b0e8e27662a9",
+      "adresas": "Taikos pr. 82, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6720644,
+      "lon": 21.1693901
+    },
+    {
+      "id": "a_50c66e4423e00be8",
+      "adresas": "Taikos pr. 86, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6713046,
+      "lon": 21.1698567
+    },
+    {
+      "id": "a_df584ddf41463940",
+      "adresas": "Taikos pr. 88, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6706983,
+      "lon": 21.170288
+    },
+    {
+      "id": "a_1c9e0823e78bf290",
+      "adresas": "Taikos pr. 88A, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6703197,
+      "lon": 21.1700109
+    },
+    {
+      "id": "a_8dbec62f262b3ea5",
+      "adresas": "Taikos pr. 92, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6693595,
+      "lon": 21.1704474
+    },
+    {
+      "id": "a_803e4ac63fdc076e",
+      "adresas": "Žardininkų g. 1, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6727219,
+      "lon": 21.1790781
+    },
+    {
+      "id": "a_753bc6a81ba0d304",
+      "adresas": "Žardininkų g. 3, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6724738,
+      "lon": 21.1799244
+    },
+    {
+      "id": "a_d66b669632397077",
+      "adresas": "Žardininkų g. 5, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6722771,
+      "lon": 21.1801608
+    },
+    {
+      "id": "a_a70d3eefa36c31de",
+      "adresas": "Žardininkų g. 7, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6719225,
+      "lon": 21.1803811
+    },
+    {
+      "id": "a_067cdf45902006ae",
+      "adresas": "Žardininkų g. 8, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6732148,
+      "lon": 21.1767742
+    },
+    {
+      "id": "a_9627e52b132557d3",
+      "adresas": "Žardininkų g. 9, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6723645,
+      "lon": 21.1792894
+    },
+    {
+      "id": "a_f6fbc42a53169c27",
+      "adresas": "Žardininkų g. 11, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6717622,
+      "lon": 21.1797175
+    },
+    {
+      "id": "a_25bbed17d6b709c5",
+      "adresas": "Žardininkų g. 12, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6725148,
+      "lon": 21.1748229
+    },
+    {
+      "id": "a_2a4f540fa086cd15",
+      "adresas": "Žardininkų g. 13, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6724219,
+      "lon": 21.1780711
+    },
+    {
+      "id": "a_ddf5c6368d8868d7",
+      "adresas": "Žardininkų g. 14, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6727918,
+      "lon": 21.1746525
+    },
+    {
+      "id": "a_08d1e740f3af2545",
+      "adresas": "Žardininkų g. 15, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6720932,
+      "lon": 21.1782809
+    },
+    {
+      "id": "a_7329986922456a1f",
+      "adresas": "Žardininkų g. 17, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6714591,
+      "lon": 21.1789729
+    },
+    {
+      "id": "a_30b9b9242051954d",
+      "adresas": "Taikos pr. 84, Klaipėda",
+      "technikas": "Arūnas Jurgutis",
+      "tel": "+37065285866",
+      "lat": 55.6715166,
+      "lon": 21.1697331
+    },
+    {
+      "id": "a_62a773de1249373e",
+      "adresas": "Darželio g. 1, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6783627,
+      "lon": 21.157273
+    },
+    {
+      "id": "a_86ed8b6e4aef4f62",
+      "adresas": "Darželio g. 6, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6778173,
+      "lon": 21.1592971
+    },
+    {
+      "id": "a_8e620dcaf1d5af2a",
+      "adresas": "Darželio g. 8, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6784208,
+      "lon": 21.1600517
+    },
+    {
+      "id": "a_aa068677c7709cd3",
+      "adresas": "Kalnupės g. 25, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6769024,
+      "lon": 21.1583638
+    },
+    {
+      "id": "a_d5aa07b0ea3a28d2",
+      "adresas": "Minijos g. 128, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.680029,
+      "lon": 21.1512359
+    },
+    {
+      "id": "a_0c4ebc26ba342de3",
+      "adresas": "Minijos g. 130, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6794298,
+      "lon": 21.1515857
+    },
+    {
+      "id": "a_656b723c2df39f96",
+      "adresas": "Minijos g. 130A, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6789577,
+      "lon": 21.1509061
+    },
+    {
+      "id": "a_3388e12f3f40b966",
+      "adresas": "Minijos g. 130B, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6792015,
+      "lon": 21.149997
+    },
+    {
+      "id": "a_cbd37ee9ce4bd500",
+      "adresas": "Minijos g. 130C, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6798751,
+      "lon": 21.1502483
+    },
+    {
+      "id": "a_efd661bec5c8b8a8",
+      "adresas": "Minijos g. 131, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6810346,
+      "lon": 21.1514674
+    },
+    {
+      "id": "a_dd8c9669ef11fa69",
+      "adresas": "Minijos g. 132, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.678763,
+      "lon": 21.1518985
+    },
+    {
+      "id": "a_26ab2bace06997c4",
+      "adresas": "Minijos g. 133, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6806857,
+      "lon": 21.1519447
+    },
+    {
+      "id": "a_6e63a53605e4429d",
+      "adresas": "Minijos g. 134, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6782485,
+      "lon": 21.1517932
+    },
+    {
+      "id": "a_24e55f82c518b65c",
+      "adresas": "Minijos g. 135, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6801829,
+      "lon": 21.151833
+    },
+    {
+      "id": "a_c98362a5bf9d5944",
+      "adresas": "Minijos g. 137, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6795178,
+      "lon": 21.1521432
+    },
+    {
+      "id": "a_cd99994f00fb0707",
+      "adresas": "Minijos g. 139, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6787483,
+      "lon": 21.1525047
+    },
+    {
+      "id": "a_243111d6bf997af4",
+      "adresas": "Minijos g. 141, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6785077,
+      "lon": 21.1531802
+    },
+    {
+      "id": "a_96b4b1e04deabce9",
+      "adresas": "Minijos g. 151, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6762076,
+      "lon": 21.1549467
+    },
+    {
+      "id": "a_1dde05a35c5cc839",
+      "adresas": "Naikupės g. 4, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6769019,
+      "lon": 21.149697
+    },
+    {
+      "id": "a_1c4888dc1df5aed8",
+      "adresas": "Naikupės g. 7, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6777161,
+      "lon": 21.1490455
+    },
+    {
+      "id": "a_b8cb1dbc7a39e636",
+      "adresas": "Naikupės g. 9, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6778954,
+      "lon": 21.1498947
+    },
+    {
+      "id": "a_0c5f041ff2de5c62",
+      "adresas": "Naikupės g. 9A, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6785529,
+      "lon": 21.1499639
+    },
+    {
+      "id": "a_c93a8c7b96b659f7",
+      "adresas": "Naikupės g. 10, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6777151,
+      "lon": 21.1513627
+    },
+    {
+      "id": "a_49bdf562038f9e3d",
+      "adresas": "Naikupės g. 11, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6780494,
+      "lon": 21.150725
+    },
+    {
+      "id": "a_444729ad0d6ea88d",
+      "adresas": "Nemuno g. 133, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6756832,
+      "lon": 21.1476223
+    },
+    {
+      "id": "a_a8f40fe89e3e8577",
+      "adresas": "Nidos g. 1, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.683714,
+      "lon": 21.1533793
+    },
+    {
+      "id": "a_495a9a2071bb78c0",
+      "adresas": "Nidos g. 9, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6775054,
+      "lon": 21.157244
+    },
+    {
+      "id": "a_c056f4ac2fb29e24",
+      "adresas": "Nidos g. 46, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6805439,
+      "lon": 21.1543447
+    },
+    {
+      "id": "a_db6b5363740a0c02",
+      "adresas": "Nidos g. 48, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6800961,
+      "lon": 21.1535983
+    },
+    {
+      "id": "a_8dbfbc8f2458d356",
+      "adresas": "Nidos g. 50, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.679803,
+      "lon": 21.1543715
+    },
+    {
+      "id": "a_35364ec63c06ea65",
+      "adresas": "Nidos g. 54, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6777431,
+      "lon": 21.15581
+    },
+    {
+      "id": "a_0a0ead67fc9e8fc0",
+      "adresas": "Nidos g. 56, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6768464,
+      "lon": 21.1567877
+    },
+    {
+      "id": "a_c98296958aff63ca",
+      "adresas": "Nidos g. 74, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6742133,
+      "lon": 21.158019
+    },
+    {
+      "id": "a_f04cfe60a541fd0a",
+      "adresas": "Strėvos g. 6, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6821259,
+      "lon": 21.1493123
+    },
+    {
+      "id": "a_fd53cbeb2374c441",
+      "adresas": "Strėvos g. 10, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6821518,
+      "lon": 21.1501008
+    },
+    {
+      "id": "a_3819d377ab8c4fdd",
+      "adresas": "Sulupės g. 5, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6805502,
+      "lon": 21.1494372
+    },
+    {
+      "id": "a_7e3a8049598f80c0",
+      "adresas": "Sulupės g. 7, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.680734,
+      "lon": 21.1503681
+    },
+    {
+      "id": "a_e4fda8e0732ade90",
+      "adresas": "Sulupės g. 8, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6798845,
+      "lon": 21.1478795
+    },
+    {
+      "id": "a_8ddddf607634dc7b",
+      "adresas": "Sulupės g. 10, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6801188,
+      "lon": 21.1489729
+    },
+    {
+      "id": "a_e6fc7e143f6a4ecc",
+      "adresas": "Sulupės g. 10A, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6794919,
+      "lon": 21.1489103
+    },
+    {
+      "id": "a_2cdfe53d423f6d3d",
+      "adresas": "Sulupės g. 11A, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6819534,
+      "lon": 21.1525089
+    },
+    {
+      "id": "a_b19e2ba729e96dfe",
+      "adresas": "Sulupės g. 12, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6802189,
+      "lon": 21.1496722
+    },
+    {
+      "id": "a_af24750af78e7c77",
+      "adresas": "Sulupės g. 13, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6814742,
+      "lon": 21.1539094
+    },
+    {
+      "id": "a_858503614d2060ef",
+      "adresas": "Sulupės g. 13A, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6819259,
+      "lon": 21.1534451
+    },
+    {
+      "id": "a_b0bbd793e415cc2e",
+      "adresas": "Sulupės g. 18, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6804434,
+      "lon": 21.1529636
+    },
+    {
+      "id": "a_1ca5d5d3c0da0761",
+      "adresas": "Žalgirio g. 1, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6794835,
+      "lon": 21.1474514
+    },
+    {
+      "id": "a_a0bfadd3a8b84d1d",
+      "adresas": "Žalgirio g. 7, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6777823,
+      "lon": 21.148304
+    },
+    {
+      "id": "a_67fd61912c0e5ef3",
+      "adresas": "Žalgirio g. 9, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6767527,
+      "lon": 21.1488324
+    },
+    {
+      "id": "a_f9a065e75454298f",
+      "adresas": "Žalgirio g. 11, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6763224,
+      "lon": 21.149046
+    },
+    {
+      "id": "a_ee821fdb1de1b4d4",
+      "adresas": "Žalgirio g. 13, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6757702,
+      "lon": 21.1493217
+    },
+    {
+      "id": "a_b97d2dd8d4b1527b",
+      "adresas": "Žalgirio g. 15, Klaipėda",
+      "technikas": "Pranas Chmeliovas",
+      "tel": "+37065216457",
+      "lat": 55.6753035,
+      "lon": 21.1497264
+    },
+    {
+      "id": "a_d494ae75eb7359bd",
+      "adresas": "Kauno g. 3, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6949291,
+      "lon": 21.1538171
+    },
+    {
+      "id": "a_5fb66d26aee32d7c",
+      "adresas": "Kauno g. 15, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6973518,
+      "lon": 21.155987
+    },
+    {
+      "id": "a_08b65231eb3239be",
+      "adresas": "Kauno g. 23, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6978321,
+      "lon": 21.1573771
+    },
+    {
+      "id": "a_9e18681276d943d4",
+      "adresas": "Kauno g. 23A, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6981392,
+      "lon": 21.1580823
+    },
+    {
+      "id": "a_f531157482897905",
+      "adresas": "Kauno g. 25, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6971729,
+      "lon": 21.158961
+    },
+    {
+      "id": "a_16b94b98eae964a6",
+      "adresas": "Kauno g. 31, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6990167,
+      "lon": 21.1601681
+    },
+    {
+      "id": "a_e0734fb221504931",
+      "adresas": "Kauno g. 33, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6980109,
+      "lon": 21.1605719
+    },
+    {
+      "id": "a_e0734fb221504931",
+      "adresas": "Kauno g. 33, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6980109,
+      "lon": 21.1605719
+    },
+    {
+      "id": "a_a2e070895b228a95",
+      "adresas": "Kauno g. 35, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.698234,
+      "lon": 21.1616418
+    },
+    {
+      "id": "a_b64239d0a8ecfec9",
+      "adresas": "Kauno g. 39, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6993245,
+      "lon": 21.1612015
+    },
+    {
+      "id": "a_3f2200fb6b684121",
+      "adresas": "Kauno g. 39A, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6997445,
+      "lon": 21.1618265
+    },
+    {
+      "id": "a_59585ba1fe6d94af",
+      "adresas": "Kauno g. 41, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6988123,
+      "lon": 21.1624615
+    },
+    {
+      "id": "a_7b636c78c86bb04d",
+      "adresas": "Kauno g. 47, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6997614,
+      "lon": 21.1652883
+    },
+    {
+      "id": "a_b6cb87075399cbb4",
+      "adresas": "Kuosų g. 16, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6919743,
+      "lon": 21.1460721
+    },
+    {
+      "id": "a_5da16d8750142927",
+      "adresas": "Kuosų g. 20, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6910981,
+      "lon": 21.1465678
+    },
+    {
+      "id": "a_0f0b998ee4f2903f",
+      "adresas": "Lelijų g. 19, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6951513,
+      "lon": 21.1452286
+    },
+    {
+      "id": "a_70e7c7672d685436",
+      "adresas": "Minijos g. 9, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7010853,
+      "lon": 21.136598
+    },
+    {
+      "id": "a_042e30d92b1795b9",
+      "adresas": "Paryžiaus Komunos g. 1A, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.700466,
+      "lon": 21.1519013
+    },
+    {
+      "id": "a_0cb63e95766ac4cf",
+      "adresas": "Paryžiaus Komunos g. 2, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6987501,
+      "lon": 21.1491589
+    },
+    {
+      "id": "a_30db9d637209b512",
+      "adresas": "Paryžiaus Komunos g. 8, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6988385,
+      "lon": 21.1510096
+    },
+    {
+      "id": "a_88ce321ada9a2afc",
+      "adresas": "Rumpiškės g. 18, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7031015,
+      "lon": 21.1482651
+    },
+    {
+      "id": "a_f3a288e287710ed1",
+      "adresas": "Rumpiškės g. 20, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7024136,
+      "lon": 21.148918
+    },
+    {
+      "id": "a_ff15c8ff3351c0fa",
+      "adresas": "Rumpiškės g. 20B, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7022327,
+      "lon": 21.1474993
+    },
+    {
+      "id": "a_8e25b23831487058",
+      "adresas": "Rumpiškės g. 22, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7018602,
+      "lon": 21.1493584
+    },
+    {
+      "id": "a_f601784573663c9d",
+      "adresas": "Rumpiškės g. 22A, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7017662,
+      "lon": 21.1486413
+    },
+    {
+      "id": "a_d087b48e5563d74e",
+      "adresas": "Rumpiškės g. 22B, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7016627,
+      "lon": 21.1479296
+    },
+    {
+      "id": "a_b528fd6bdab58bf4",
+      "adresas": "Rumpiškės g. 24, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7012257,
+      "lon": 21.1499312
+    },
+    {
+      "id": "a_2c34eb2c6902034f",
+      "adresas": "Rumpiškės g. 26, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7006581,
+      "lon": 21.1501868
+    },
+    {
+      "id": "a_035d9f49825b418c",
+      "adresas": "Rumpiškės g. 26A, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.700448,
+      "lon": 21.1496143
+    },
+    {
+      "id": "a_adb5cc955f837035",
+      "adresas": "Rumpiškės g. 28, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7003761,
+      "lon": 21.1504848
+    },
+    {
+      "id": "a_0ac46853308ab6b8",
+      "adresas": "Rumpiškės g. 32, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6998095,
+      "lon": 21.1509844
+    },
+    {
+      "id": "a_28b0db9244e44549",
+      "adresas": "Sausio 15-osios g. 10, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7028344,
+      "lon": 21.1461553
+    },
+    {
+      "id": "a_b4b4e188be1f3236",
+      "adresas": "Sausio 15-osios g. 12, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7029192,
+      "lon": 21.1468517
+    },
+    {
+      "id": "a_072a6911a444491d",
+      "adresas": "Sausio 15-osios g. 18, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7033515,
+      "lon": 21.1495317
+    },
+    {
+      "id": "a_9ab5115164523dcb",
+      "adresas": "Sausio 15-osios g. 20, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7034527,
+      "lon": 21.1503215
+    },
+    {
+      "id": "a_9381742a6bbed20b",
+      "adresas": "Sausio 15-osios g. 22, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.703558,
+      "lon": 21.1510921
+    },
+    {
+      "id": "a_9ae49cd46d7650a1",
+      "adresas": "Sausio 15-osios g. 24, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7034233,
+      "lon": 21.1519839
+    },
+    {
+      "id": "a_131342be97ce1d2d",
+      "adresas": "Šilutės pl. 10, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7010174,
+      "lon": 21.1619364
+    },
+    {
+      "id": "a_7312d4471a7aa2b9",
+      "adresas": "Šilutės pl. 12, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7013554,
+      "lon": 21.1639185
+    },
+    {
+      "id": "a_b803cc760221cc05",
+      "adresas": "Šilutės pl. 24, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7003978,
+      "lon": 21.1660358
+    },
+    {
+      "id": "a_67615d686870e289",
+      "adresas": "Taikos pr. 17, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7026135,
+      "lon": 21.1451254
+    },
+    {
+      "id": "a_b5bce0887a895097",
+      "adresas": "Taikos pr. 19, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7020155,
+      "lon": 21.1453784
+    },
+    {
+      "id": "a_2b5f01191b0f7747",
+      "adresas": "Taikos pr. 19A, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7020252,
+      "lon": 21.1460061
+    },
+    {
+      "id": "a_f23085a902baf880",
+      "adresas": "Taikos pr. 19B, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7021263,
+      "lon": 21.146803
+    },
+    {
+      "id": "a_0404961221026319",
+      "adresas": "Taikos pr. 21, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7013078,
+      "lon": 21.1459791
+    },
+    {
+      "id": "a_54522e62124c5232",
+      "adresas": "Taikos pr. 21A, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7014897,
+      "lon": 21.1465124
+    },
+    {
+      "id": "a_e34d8306c64621dc",
+      "adresas": "Taikos pr. 21B, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7015748,
+      "lon": 21.1472227
+    },
+    {
+      "id": "a_4dcd3b6904858952",
+      "adresas": "Taikos pr. 23, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7008371,
+      "lon": 21.1464228
+    },
+    {
+      "id": "a_64fb932cc4846104",
+      "adresas": "Taikos pr. 25, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.70039,
+      "lon": 21.1467922
+    },
+    {
+      "id": "a_71a793a36d259009",
+      "adresas": "Taikos pr. 27, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7002748,
+      "lon": 21.1475084
+    },
+    {
+      "id": "a_8deedced0014b2ac",
+      "adresas": "Taikos pr. 29, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6998471,
+      "lon": 21.1472466
+    },
+    {
+      "id": "a_1dd65ce80a3cbb5b",
+      "adresas": "Taikos pr. 31, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6584294,
+      "lon": 21.1778337
+    },
+    {
+      "id": "a_2dac048b1fff518b",
+      "adresas": "Taikos pr. 33, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6993001,
+      "lon": 21.147849
+    },
+    {
+      "id": "a_4e77ccdffdf2b7a0",
+      "adresas": "Taikos pr. 35, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6991382,
+      "lon": 21.1485207
+    },
+    {
+      "id": "a_9febc125f6625b1d",
+      "adresas": "Taikos pr. 35B, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6996071,
+      "lon": 21.1495746
+    },
+    {
+      "id": "a_0b7ec5f20aff82db",
+      "adresas": "Taikos pr. 35C, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6997501,
+      "lon": 21.1501374
+    },
+    {
+      "id": "a_bd5090e5a6a836c7",
+      "adresas": "Taikos pr. 41, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6974764,
+      "lon": 21.14938
+    },
+    {
+      "id": "a_85bc1d6b77f3f777",
+      "adresas": "Taikos pr. 43, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.697684,
+      "lon": 21.1502226
+    },
+    {
+      "id": "a_9d57180d15ba29ed",
+      "adresas": "Taikos pr. 49, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6967602,
+      "lon": 21.1500268
+    },
+    {
+      "id": "a_ac1e620c64efbd97",
+      "adresas": "Taikos pr. 55, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6957905,
+      "lon": 21.150602
+    },
+    {
+      "id": "a_605d91871bc604bf",
+      "adresas": "Taikos pr. 59, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6947729,
+      "lon": 21.1523779
+    },
+    {
+      "id": "a_33b8b315c87cb948",
+      "adresas": "Tilžės g. 48, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7041406,
+      "lon": 21.1540154
+    },
+    {
+      "id": "a_1f6bc8324f155f56",
+      "adresas": "Tilžės g. 48A, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7039614,
+      "lon": 21.1538501
+    },
+    {
+      "id": "a_3f5f2f74246fae45",
+      "adresas": "Tilžės g. 56, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7044655,
+      "lon": 21.1576941
+    },
+    {
+      "id": "a_113a2e23675739f6",
+      "adresas": "Kauno g. 5, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6953444,
+      "lon": 21.1537578
+    },
+    {
+      "id": "a_1ec61e2749e2fcfc",
+      "adresas": "Rumpiškės g. 20A, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7023101,
+      "lon": 21.1482045
+    },
+    {
+      "id": "a_6eadf329a3e1cffb",
+      "adresas": "Rumpiškės g. 24A, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7012187,
+      "lon": 21.1492065
+    },
+    {
+      "id": "a_8ed915a37f1dc41c",
+      "adresas": "Sausio 15-osios g. 14, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.7030294,
+      "lon": 21.1475523
+    },
+    {
+      "id": "a_0dd194f364ea9663",
+      "adresas": "Taikos pr. 32A, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6963372,
+      "lon": 21.1489032
+    },
+    {
+      "id": "a_8a5479ac97cc8781",
+      "adresas": "Taikos pr. 35A, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.69944,
+      "lon": 21.1490003
+    },
+    {
+      "id": "a_5ece67859ae4eb10",
+      "adresas": "Birutės g. 22A, Klaipėda",
+      "technikas": "Vytautas Žilinskas",
+      "tel": "+37065601401",
+      "lat": 55.6923742,
+      "lon": 21.1464097
+    },
+    {
+      "id": "a_fd6ee35b15019f2c",
+      "adresas": "Debreceno g. 90, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6829309,
+      "lon": 21.16551
+    },
+    {
+      "id": "a_7d24444406a40237",
+      "adresas": "Debreceno g. 92, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6823169,
+      "lon": 21.1666469
+    },
+    {
+      "id": "a_2b772409d4f6aad7",
+      "adresas": "Debreceno g. 96, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6815744,
+      "lon": 21.1665385
+    },
+    {
+      "id": "a_2f7c2cd795651206",
+      "adresas": "Gedminų g. 10, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6800823,
+      "lon": 21.1763908
+    },
+    {
+      "id": "a_3eef2d151982453e",
+      "adresas": "I. Simonaitytės g. 1, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6763057,
+      "lon": 21.1872119
+    },
+    {
+      "id": "a_0f12febeda3bd8ab",
+      "adresas": "I. Simonaitytės g. 3, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6760625,
+      "lon": 21.188176
+    },
+    {
+      "id": "a_4d154176d399b220",
+      "adresas": "I. Simonaitytės g. 5, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6758628,
+      "lon": 21.1872918
+    },
+    {
+      "id": "a_b49c574bf915b9a9",
+      "adresas": "I. Simonaitytės g. 18, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6711483,
+      "lon": 21.1857906
+    },
+    {
+      "id": "a_492523a0d017f9c5",
+      "adresas": "I. Simonaitytės g. 22, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6711006,
+      "lon": 21.184237
+    },
+    {
+      "id": "a_81bcbd87d93c0fb6",
+      "adresas": "I. Simonaitytės g. 23, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6730722,
+      "lon": 21.189978
+    },
+    {
+      "id": "a_050b504c1826f742",
+      "adresas": "I. Simonaitytės g. 28, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6700529,
+      "lon": 21.1861996
+    },
+    {
+      "id": "a_173124d69a2213b4",
+      "adresas": "I. Simonaitytės g. 30, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6704073,
+      "lon": 21.1871969
+    },
+    {
+      "id": "a_0a176a4f82f2f112",
+      "adresas": "I. Simonaitytės g. 32, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6700663,
+      "lon": 21.1880066
+    },
+    {
+      "id": "a_521eeb9f490fece5",
+      "adresas": "Laukininkų g. 6, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6681481,
+      "lon": 21.1885107
+    },
+    {
+      "id": "a_e7f1635000a85f84",
+      "adresas": "Laukininkų g. 8, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6683915,
+      "lon": 21.1875718
+    },
+    {
+      "id": "a_1797c7d8faa14136",
+      "adresas": "Liubeko g. 1, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6642777,
+      "lon": 21.1792549
+    },
+    {
+      "id": "a_11429f7fcd6578ae",
+      "adresas": "Minijos g. 159, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6715485,
+      "lon": 21.1590456
+    },
+    {
+      "id": "a_660613bfe83e772d",
+      "adresas": "Priegliaus g. 4, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6717281,
+      "lon": 21.1598524
+    },
+    {
+      "id": "a_7d38f6b25133d730",
+      "adresas": "Reikjaviko g. 1, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6713308,
+      "lon": 21.1747608
+    },
+    {
+      "id": "a_011c4ef5598586ad",
+      "adresas": "Reikjaviko g. 6, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6699783,
+      "lon": 21.1737996
+    },
+    {
+      "id": "a_ff2e0fc86c915aa0",
+      "adresas": "Reikjaviko g. 11, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.669387,
+      "lon": 21.1768628
+    },
+    {
+      "id": "a_cf0dfead02ed5bc6",
+      "adresas": "Reikjaviko g. 11A, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6694508,
+      "lon": 21.1772502
+    },
+    {
+      "id": "a_2b293a780b696fc7",
+      "adresas": "Reikjaviko g. 13, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6689741,
+      "lon": 21.1776724
+    },
+    {
+      "id": "a_299397a647849cf5",
+      "adresas": "Reikjaviko g. 15, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6685269,
+      "lon": 21.1768532
+    },
+    {
+      "id": "a_6f51802329e15466",
+      "adresas": "Šilutės pl. 86, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6732532,
+      "lon": 21.1953826
+    },
+    {
+      "id": "a_a0b422362e6f3f9b",
+      "adresas": "Šilutės pl. 88, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6728947,
+      "lon": 21.1956262
+    },
+    {
+      "id": "a_0eb46d33bb191c1c",
+      "adresas": "Šilutės pl. 90, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6726428,
+      "lon": 21.1964923
+    },
+    {
+      "id": "a_655d7c63853eaa69",
+      "adresas": "Smiltelės g. 5, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.670551,
+      "lon": 21.1961151
+    },
+    {
+      "id": "a_922347e0b21e9388",
+      "adresas": "Smiltelės g. 8, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.67162,
+      "lon": 21.1954321
+    },
+    {
+      "id": "a_551a1b2f710ba2b5",
+      "adresas": "Smiltelės g. 9, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6695594,
+      "lon": 21.1964882
+    },
+    {
+      "id": "a_6129fb55c8bb28b9",
+      "adresas": "Smiltelės g. 10, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.671495,
+      "lon": 21.1948152
+    },
+    {
+      "id": "a_3c8a3ab069d7c3b3",
+      "adresas": "Smiltelės g. 12, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6714252,
+      "lon": 21.194142
+    },
+    {
+      "id": "a_faeb05aee9c6df03",
+      "adresas": "Smiltelės g. 47, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6670638,
+      "lon": 21.179682
+    },
+    {
+      "id": "a_9f5f06b93e47db1e",
+      "adresas": "Smiltelės g. 55, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6667796,
+      "lon": 21.1783627
+    },
+    {
+      "id": "a_f9519973f88739e0",
+      "adresas": "Statybininkų pr. 21, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6727111,
+      "lon": 21.1735447
+    },
+    {
+      "id": "a_da72a0184b64fafb",
+      "adresas": "Statybininkų pr. 23, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.673148,
+      "lon": 21.1735149
+    },
+    {
+      "id": "a_07ee40875d58cde0",
+      "adresas": "Statybininkų pr. 25, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6729821,
+      "lon": 21.1729799
+    },
+    {
+      "id": "a_496d92e796078316",
+      "adresas": "Statybininkų pr. 27, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.672896,
+      "lon": 21.1725385
+    },
+    {
+      "id": "a_75b8f17da1ed147b",
+      "adresas": "Statybininkų pr. 32, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.674519,
+      "lon": 21.1708514
+    },
+    {
+      "id": "a_dbfc1443e9404085",
+      "adresas": "Taikos pr. 83, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6828013,
+      "lon": 21.1644531
+    },
+    {
+      "id": "a_305aedfb532b5eeb",
+      "adresas": "Taikos pr. 85, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6821122,
+      "lon": 21.165459
+    },
+    {
+      "id": "a_772681afcb76e859",
+      "adresas": "Taikos pr. 87, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6817222,
+      "lon": 21.1650685
+    },
+    {
+      "id": "a_d3fd7112ead61131",
+      "adresas": "Taikos pr. 89, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6813008,
+      "lon": 21.1657745
+    },
+    {
+      "id": "a_f139320907d31d26",
+      "adresas": "Taikos pr. 102, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6679556,
+      "lon": 21.1719318
+    },
+    {
+      "id": "a_89a571d384f12b4a",
+      "adresas": "Taikos pr. 104, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6675052,
+      "lon": 21.172211
+    },
+    {
+      "id": "a_e7b8757e61105000",
+      "adresas": "Taikos pr. 112, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6664991,
+      "lon": 21.1718536
+    },
+    {
+      "id": "a_309a405f72fedb36",
+      "adresas": "Taikos pr. 121, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6709743,
+      "lon": 21.1726236
+    },
+    {
+      "id": "a_9d6a7dc32fe39627",
+      "adresas": "Taikos pr. 123, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6705231,
+      "lon": 21.1723105
+    },
+    {
+      "id": "a_f7d76255dff0c1c8",
+      "adresas": "Taikos pr. 125, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6699538,
+      "lon": 21.1727655
+    },
+    {
+      "id": "a_72aff0e20614d616",
+      "adresas": "Taikos pr. 127, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6695382,
+      "lon": 21.1735552
+    },
+    {
+      "id": "a_63b06a9f7e29c7ee",
+      "adresas": "Taikos pr. 129, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6691058,
+      "lon": 21.1731995
+    },
+    {
+      "id": "a_058bcf80fd37ad18",
+      "adresas": "Taikos pr. 137, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6669436,
+      "lon": 21.1746507
+    },
+    {
+      "id": "a_69c74487a2142161",
+      "adresas": "Varpų g. 19, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6643384,
+      "lon": 21.18216
+    },
+    {
+      "id": "a_4f7294ccfa597c6f",
+      "adresas": "Varpų g. 21, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6641145,
+      "lon": 21.1819811
+    },
+    {
+      "id": "a_04bf7d08db2d4a20",
+      "adresas": "Vingio g. 3, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6734224,
+      "lon": 21.1933678
+    },
+    {
+      "id": "a_2d4a55944e1e8636",
+      "adresas": "Vingio g. 11, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6722357,
+      "lon": 21.1931814
+    },
+    {
+      "id": "a_3ab5bd1ac5371c7b",
+      "adresas": "Vingio g. 13, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6720097,
+      "lon": 21.1935413
+    },
+    {
+      "id": "a_827aa5d7ec3bb610",
+      "adresas": "Vingio g. 15, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.671772,
+      "lon": 21.1939119
+    },
+    {
+      "id": "a_6650a814e871cea4",
+      "adresas": "Žardininkų g. 2, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.673587,
+      "lon": 21.1785961
+    },
+    {
+      "id": "a_0e98ad2b7d2a210d",
+      "adresas": "Žardininkų g. 4, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6733081,
+      "lon": 21.1787666
+    },
+    {
+      "id": "a_bcdb36b27f702119",
+      "adresas": "Žardininkų g. 16, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6722218,
+      "lon": 21.173881
+    },
+    {
+      "id": "a_3c05161efad6189d",
+      "adresas": "Žardininkų g. 21, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6719588,
+      "lon": 21.1753297
+    },
+    {
+      "id": "a_98d477dc17b9058a",
+      "adresas": "Žardininkų g. 23, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6717989,
+      "lon": 21.1745741
+    },
+    {
+      "id": "a_bfaa603b6a48852d",
+      "adresas": "Smiltelės g. 7, Klaipėda",
+      "technikas": "Vaidas Andriušis",
+      "tel": "+37065698528",
+      "lat": 55.6701373,
+      "lon": 21.1971466
+    },
+    {
+      "id": "a_713bed31562651e6",
+      "adresas": "Ašaralio g. 2, Palanga",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.932921,
+      "lon": 21.0729376
+    },
+    {
+      "id": "a_ba995fa4e657243e",
+      "adresas": "Butkų Juzės g. 3, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7191788,
+      "lon": 21.135783
+    },
+    {
+      "id": "a_614b8a9cefa46ee7",
+      "adresas": "Butkų Juzės g. 4, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7188147,
+      "lon": 21.1355548
+    },
+    {
+      "id": "a_47764060674b9f96",
+      "adresas": "Butkų Juzės g. 5, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7191413,
+      "lon": 21.1362712
+    },
+    {
+      "id": "a_33e7d2af7cede705",
+      "adresas": "Butkų Juzės g. 7, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7191014,
+      "lon": 21.1367532
+    },
+    {
+      "id": "a_af59f7cd55a6f766",
+      "adresas": "H. Manto g. 7, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7134401,
+      "lon": 21.1301848
+    },
+    {
+      "id": "a_5b7667f7a3a6665e",
+      "adresas": "H. Manto g. 18, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.714513,
+      "lon": 21.1300362
+    },
+    {
+      "id": "a_fded252676368863",
+      "adresas": "J. Karoso g. 10, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7140994,
+      "lon": 21.1350722
+    },
+    {
+      "id": "a_490d30dd05b55f10",
+      "adresas": "J. Karoso g. 11, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7140555,
+      "lon": 21.134703
+    },
+    {
+      "id": "a_e80d1e61baf03e81",
+      "adresas": "J. Karoso g. 14, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7153497,
+      "lon": 21.1341282
+    },
+    {
+      "id": "a_4944443339f5f601",
+      "adresas": "J. Karoso g. 16, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7155453,
+      "lon": 21.1339891
+    },
+    {
+      "id": "a_6a1d56206547608c",
+      "adresas": "J. Karoso g. 18, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.715837,
+      "lon": 21.1337796
+    },
+    {
+      "id": "a_af519d0d0b642d63",
+      "adresas": "J. Karoso g. 20, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7162753,
+      "lon": 21.133488
+    },
+    {
+      "id": "a_b65d9cd28c37af25",
+      "adresas": "J. Karoso g. 21, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.715445,
+      "lon": 21.1335738
+    },
+    {
+      "id": "a_b5ab27947f0022af",
+      "adresas": "Jaunystės g. 16, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.723333,
+      "lon": 21.1715656
+    },
+    {
+      "id": "a_546582897684fd99",
+      "adresas": "Jūratės g. 17, Palanga",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.9208981,
+      "lon": 21.0662963
+    },
+    {
+      "id": "a_5ffb2c3ab8ac50b9",
+      "adresas": "K. Donelaičio g. 16, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7166501,
+      "lon": 21.1346937
+    },
+    {
+      "id": "a_c9a5f013ba753f74",
+      "adresas": "Kalnupės g. 13, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.675949,
+      "lon": 21.1522422
+    },
+    {
+      "id": "a_47b3d23029ae9fae",
+      "adresas": "Kalnupės g. 15, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.6762785,
+      "lon": 21.152467
+    },
+    {
+      "id": "a_1d70838cfe946cee",
+      "adresas": "Laivų skg. 4, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.713262,
+      "lon": 21.1392345
+    },
+    {
+      "id": "a_20aef886d658fba5",
+      "adresas": "Liepų g. 20, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7129579,
+      "lon": 21.136536
+    },
+    {
+      "id": "a_788687a1e8a6fab3",
+      "adresas": "Liepų g. 26, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7133483,
+      "lon": 21.1377172
+    },
+    {
+      "id": "a_8d637cecfaf56051",
+      "adresas": "Liepų g. 28, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7135052,
+      "lon": 21.1381487
+    },
+    {
+      "id": "a_03e20f89eb4853c2",
+      "adresas": "Liepų g. 30, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7135686,
+      "lon": 21.138531
+    },
+    {
+      "id": "a_3b0f5222fc6ad9d4",
+      "adresas": "Liepų g. 34, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7137326,
+      "lon": 21.139312
+    },
+    {
+      "id": "a_dc330b369874181a",
+      "adresas": "Liepų g. 36, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7139737,
+      "lon": 21.1396809
+    },
+    {
+      "id": "a_d85fac5018642fa8",
+      "adresas": "Liepų g. 37, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7147223,
+      "lon": 21.1406952
+    },
+    {
+      "id": "a_7f8843bb3b423fe5",
+      "adresas": "Liepų g. 39, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7148809,
+      "lon": 21.1410992
+    },
+    {
+      "id": "a_662ef8e4b41c49a4",
+      "adresas": "Liepų g. 40, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7143576,
+      "lon": 21.1406823
+    },
+    {
+      "id": "a_8ab7750df4f8ce12",
+      "adresas": "Liepų g. 40A, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7140107,
+      "lon": 21.1408759
+    },
+    {
+      "id": "a_e94f35931281c23b",
+      "adresas": "Liepų g. 44A, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7144639,
+      "lon": 21.1421211
+    },
+    {
+      "id": "a_ebd298a3b828e726",
+      "adresas": "Liepų g. 46A, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7147486,
+      "lon": 21.1426482
+    },
+    {
+      "id": "a_73e8a221e69bc091",
+      "adresas": "Liepų g. 49, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7167118,
+      "lon": 21.1453099
+    },
+    {
+      "id": "a_67f4b5ef0f9b9a5c",
+      "adresas": "Liepų g. 51, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7165465,
+      "lon": 21.1458886
+    },
+    {
+      "id": "a_ee19a65a47873674",
+      "adresas": "Liepų g. 52, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7161511,
+      "lon": 21.145789
+    },
+    {
+      "id": "a_0210b2847f101889",
+      "adresas": "Liepų g. 53, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7170263,
+      "lon": 21.1470851
+    },
+    {
+      "id": "a_bcd59c8c990694f0",
+      "adresas": "Liepų g. 55, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7171981,
+      "lon": 21.1476877
+    },
+    {
+      "id": "a_9768a543c187b66f",
+      "adresas": "Lietuvininkų a. 4, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7183116,
+      "lon": 21.1292481
+    },
+    {
+      "id": "a_d15515841cfbed74",
+      "adresas": "M. Mažvydo al. 11, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7149889,
+      "lon": 21.1335141
+    },
+    {
+      "id": "a_5cea1e7e5e91607a",
+      "adresas": "Medvalakio g. 12, Palanga",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.9225831,
+      "lon": 21.0901084
+    },
+    {
+      "id": "a_6063ac2741f56adc",
+      "adresas": "Medvalakio g. 12A, Palanga",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.922641,
+      "lon": 21.0910477
+    },
+    {
+      "id": "a_fa030cb8c266a93c",
+      "adresas": "Poilsio g. 12, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.6779823,
+      "lon": 21.1601542
+    },
+    {
+      "id": "a_11c27b552f828a0b",
+      "adresas": "Priestočio g. 14, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7203499,
+      "lon": 21.1334124
+    },
+    {
+      "id": "a_04707c302decbfb7",
+      "adresas": "S. Daukanto g. 10, Palanga",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.9161455,
+      "lon": 21.0602043
+    },
+    {
+      "id": "a_1a0c74e00ea4c657",
+      "adresas": "S. Daukanto g. 10A, Palanga",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.9155526,
+      "lon": 21.0604168
+    },
+    {
+      "id": "a_7d88dca60f1553ea",
+      "adresas": "S. Daukanto g. 20, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.715992,
+      "lon": 21.1309842
+    },
+    {
+      "id": "a_3a236fb00fd3b84f",
+      "adresas": "S. Daukanto g. 23, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7163117,
+      "lon": 21.131029
+    },
+    {
+      "id": "a_490c6d59a2e6accc",
+      "adresas": "S. Daukanto g. 25, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.716372,
+      "lon": 21.1313192
+    },
+    {
+      "id": "a_25b8e31b42399649",
+      "adresas": "S. Daukanto g. 27, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7165036,
+      "lon": 21.1316137
+    },
+    {
+      "id": "a_01e57d6487bd59af",
+      "adresas": "S. Daukanto g. 28, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7166129,
+      "lon": 21.1334146
+    },
+    {
+      "id": "a_28bc939529238937",
+      "adresas": "S. Daukanto g. 33, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7173559,
+      "lon": 21.1351333
+    },
+    {
+      "id": "a_33783d73790aa31f",
+      "adresas": "S. Daukanto g. 36, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7169841,
+      "lon": 21.1350703
+    },
+    {
+      "id": "a_0b04eb43b06039f0",
+      "adresas": "S. Daukanto g. 43, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7184063,
+      "lon": 21.1390453
+    },
+    {
+      "id": "a_591f1eff7d67a19b",
+      "adresas": "S. Nėries g. 6, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7181896,
+      "lon": 21.1347104
+    },
+    {
+      "id": "a_da7e5352885eb01a",
+      "adresas": "S. Nėries g. 12, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7192797,
+      "lon": 21.1349029
+    },
+    {
+      "id": "a_6922df6983a813e0",
+      "adresas": "S. Nėries g. 14, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7194154,
+      "lon": 21.1349286
+    },
+    {
+      "id": "a_27704c206190a33b",
+      "adresas": "Vanagupės g. 22, Palanga",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.9363948,
+      "lon": 21.0729477
+    },
+    {
+      "id": "a_4e3165246b39d94b",
+      "adresas": "Vanagupės g. 24, Palanga",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.9373706,
+      "lon": 21.0729575
+    },
+    {
+      "id": "a_51c200bff90ee492",
+      "adresas": "Vanagupės g. 26, Palanga",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.9375536,
+      "lon": 21.0741026
+    },
+    {
+      "id": "a_57449e23160dac12",
+      "adresas": "Vilties g. 5, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7188281,
+      "lon": 21.1321373
+    },
+    {
+      "id": "a_7085f8b1c49c3802",
+      "adresas": "Vilties g. 7, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7188144,
+      "lon": 21.1326745
+    },
+    {
+      "id": "a_b18a9a9b63df0e87",
+      "adresas": "Vytauto g. 10, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7137688,
+      "lon": 21.1355512
+    },
+    {
+      "id": "a_2bae817de9552ebe",
+      "adresas": "Vytauto g. 12, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7135263,
+      "lon": 21.1349095
+    },
+    {
+      "id": "a_36854bc5d2285180",
+      "adresas": "Vytauto g. 14, Klaipėda",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.7133939,
+      "lon": 21.134229
+    },
+    {
+      "id": "a_6e7a417788e68227",
+      "adresas": "Vytauto g. 155, Palanga",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.9369016,
+      "lon": 21.0745649
+    },
+    {
+      "id": "a_7e4b9c61dde49745",
+      "adresas": "Vytauto g. 155A, Palanga",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.8997638,
+      "lon": 21.0617477
+    },
+    {
+      "id": "a_b4b07f780f2275f1",
+      "adresas": "Vytauto g. 157, Palanga",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.9366463,
+      "lon": 21.076394
+    },
+    {
+      "id": "a_1ec2e4a31064401c",
+      "adresas": "S. Daukanto g. 10C, Palanga",
+      "technikas": "Dimitrj Ryžkov",
+      "tel": "+37068543099",
+      "lat": 55.9141692,
+      "lon": 21.0600731
+    },
+    {
+      "id": "a_c6fd4832d9a7d169",
+      "adresas": "Danės g. 21, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7113727,
+      "lon": 21.1345122
+    },
+    {
+      "id": "a_9edb23d47bc8ddef",
+      "adresas": "Danės g. 23, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7116578,
+      "lon": 21.135454
+    },
+    {
+      "id": "a_d4edebdadb1ce819",
+      "adresas": "Danės g. 25, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7120568,
+      "lon": 21.1367071
+    },
+    {
+      "id": "a_a0ada86cb637da3d",
+      "adresas": "Danės g. 27, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.712256,
+      "lon": 21.1371867
+    },
+    {
+      "id": "a_daa121dea236ab7d",
+      "adresas": "Danės g. 31, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7128203,
+      "lon": 21.1389837
+    },
+    {
+      "id": "a_d6d48ed322a7b645",
+      "adresas": "Danės g. 35, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7134172,
+      "lon": 21.1407715
+    },
+    {
+      "id": "a_761aac9694ec3ee3",
+      "adresas": "Danės g. 37, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7136741,
+      "lon": 21.1414628
+    },
+    {
+      "id": "a_e9a2aba82b0b76f9",
+      "adresas": "Dariaus ir Girėno g. 3, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7213094,
+      "lon": 21.1280909
+    },
+    {
+      "id": "a_714e67305914ff28",
+      "adresas": "Dariaus ir Girėno g. 5, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7213724,
+      "lon": 21.1275984
+    },
+    {
+      "id": "a_a6d8fc886e3335a8",
+      "adresas": "Dariaus ir Girėno g. 7, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7213866,
+      "lon": 21.1273419
+    },
+    {
+      "id": "a_2b510e427e5ee0aa",
+      "adresas": "Dariaus ir Girėno g. 9, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.721379,
+      "lon": 21.1269108
+    },
+    {
+      "id": "a_37129eebc2ccfccb",
+      "adresas": "Dariaus ir Girėno g. 11, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7213582,
+      "lon": 21.1266338
+    },
+    {
+      "id": "a_b96b946bd6860791",
+      "adresas": "J. Karoso g. 3, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7127032,
+      "lon": 21.1360992
+    },
+    {
+      "id": "a_622f030e81b1c87d",
+      "adresas": "J. Zauerveino g. 23, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7152997,
+      "lon": 21.1210945
+    },
+    {
+      "id": "a_7879884e501fcc13",
+      "adresas": "Liepų g. 2, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7115595,
+      "lon": 21.132489
+    },
+    {
+      "id": "a_0518cd77a0d2a949",
+      "adresas": "Liepų g. 21, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7133618,
+      "lon": 21.1360478
+    },
+    {
+      "id": "a_52d93b8dbd06741c",
+      "adresas": "Liepų g. 22, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7131969,
+      "lon": 21.1372359
+    },
+    {
+      "id": "a_b109ae4dcf31754a",
+      "adresas": "Liepų g. 25, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7136826,
+      "lon": 21.1370917
+    },
+    {
+      "id": "a_7d2ee13ed674ac24",
+      "adresas": "Lietuvininkų a. 9, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7191539,
+      "lon": 21.1300557
+    },
+    {
+      "id": "a_40985cb1ba9c2be6",
+      "adresas": "Lietuvininkų a. 11, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.719149,
+      "lon": 21.1303921
+    },
+    {
+      "id": "a_2a4e0227d485000a",
+      "adresas": "Ligoninės g. 2, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7138222,
+      "lon": 21.1324193
+    },
+    {
+      "id": "a_ce56db3bbae55294",
+      "adresas": "Ligoninės g. 5, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7137287,
+      "lon": 21.1320233
+    },
+    {
+      "id": "a_abbc7c429b4bdb15",
+      "adresas": "M. Mažvydo al. 7, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7144218,
+      "lon": 21.1317099
+    },
+    {
+      "id": "a_d56b8d77e7a4c59a",
+      "adresas": "M. Mažvydo al. 9, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7147334,
+      "lon": 21.1326791
+    },
+    {
+      "id": "a_dc9d0613c434af5f",
+      "adresas": "Priestočio g. 4, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7206564,
+      "lon": 21.1304312
+    },
+    {
+      "id": "a_639acd6825c88c50",
+      "adresas": "Ramioji g. 1A, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7193704,
+      "lon": 21.1304681
+    },
+    {
+      "id": "a_e46bd264f1259aec",
+      "adresas": "Ramioji g. 3, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7196328,
+      "lon": 21.1305093
+    },
+    {
+      "id": "a_67f087decf511c6f",
+      "adresas": "Ramioji g. 4, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7192439,
+      "lon": 21.1309642
+    },
+    {
+      "id": "a_277feb650350187d",
+      "adresas": "Ramioji g. 5, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7198636,
+      "lon": 21.13052
+    },
+    {
+      "id": "a_6f1922b97f473bae",
+      "adresas": "Ramioji g. 6, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7194683,
+      "lon": 21.1309937
+    },
+    {
+      "id": "a_a06a5df1891789e0",
+      "adresas": "Ramioji g. 7, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7200728,
+      "lon": 21.1305038
+    },
+    {
+      "id": "a_ab0944c6dfb88477",
+      "adresas": "Ramioji g. 8, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7197069,
+      "lon": 21.1310162
+    },
+    {
+      "id": "a_06fe49fb99ad4e3a",
+      "adresas": "Ramioji g. 10, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7199343,
+      "lon": 21.1310231
+    },
+    {
+      "id": "a_e6cbdb7c15fe6788",
+      "adresas": "Ramioji g. 12, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7201515,
+      "lon": 21.1310331
+    },
+    {
+      "id": "a_26f6ac013285177b",
+      "adresas": "Šaulių g. 3, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7135565,
+      "lon": 21.1333786
+    },
+    {
+      "id": "a_6fd1155077e1a12f",
+      "adresas": "Šaulių g. 4, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7136654,
+      "lon": 21.133746
+    },
+    {
+      "id": "a_188d0c7edc827b2f",
+      "adresas": "Šaulių g. 5, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7137614,
+      "lon": 21.133128
+    },
+    {
+      "id": "a_51ac509668e9cd85",
+      "adresas": "Šaulių g. 8, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7142141,
+      "lon": 21.1330818
+    },
+    {
+      "id": "a_7cbee1d6e715f2a0",
+      "adresas": "Šaulių g. 14, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7149694,
+      "lon": 21.1319742
+    },
+    {
+      "id": "a_2d0ac27a2b2d8664",
+      "adresas": "Šaulių g. 16, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7153155,
+      "lon": 21.1315842
+    },
+    {
+      "id": "a_6c60e9d04b216fc1",
+      "adresas": "Šaulių g. 23A, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7172806,
+      "lon": 21.1296699
+    },
+    {
+      "id": "a_f22a63b89e32d5b7",
+      "adresas": "Šaulių g. 27, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7179475,
+      "lon": 21.1294519
+    },
+    {
+      "id": "a_bd6d6b49f8fe0151",
+      "adresas": "Šaulių g. 29, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7193242,
+      "lon": 21.1290209
+    },
+    {
+      "id": "a_54a4ca097989d4b3",
+      "adresas": "Šaulių g. 31, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7195542,
+      "lon": 21.1288701
+    },
+    {
+      "id": "a_8ace2e75849b2f4f",
+      "adresas": "Šaulių g. 33, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7197587,
+      "lon": 21.1285362
+    },
+    {
+      "id": "a_4ef387a9c26fcc1f",
+      "adresas": "Šaulių g. 39, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7204559,
+      "lon": 21.1284871
+    },
+    {
+      "id": "a_4c4ffa528956607b",
+      "adresas": "Šaulių g. 42, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7191325,
+      "lon": 21.1297624
+    },
+    {
+      "id": "a_0106f9bba193b280",
+      "adresas": "Šaulių g. 44, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.719297,
+      "lon": 21.1296575
+    },
+    {
+      "id": "a_1f42d5551104abdd",
+      "adresas": "Šaulių g. 52, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.720204,
+      "lon": 21.1294071
+    },
+    {
+      "id": "a_da34f7a91ead2233",
+      "adresas": "Sodų g. 5, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7183303,
+      "lon": 21.1359894
+    },
+    {
+      "id": "a_c286944b96a468cf",
+      "adresas": "Sodų g. 7, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7185736,
+      "lon": 21.1359599
+    },
+    {
+      "id": "a_c1b823dce465a426",
+      "adresas": "Vilties g. 3, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7188447,
+      "lon": 21.1316147
+    },
+    {
+      "id": "a_3feacd7e3f39b910",
+      "adresas": "Vilties g. 4, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7184621,
+      "lon": 21.1305351
+    },
+    {
+      "id": "a_c843cfe8157e19a5",
+      "adresas": "M. Mažvydo al. 13, Klaipėda",
+      "technikas": "Sergej Kotikov",
+      "tel": "+37062035300",
+      "lat": 55.7153629,
+      "lon": 21.1346959
+    },
+    {
+      "id": "a_664688a714c18e6d",
+      "adresas": "Baltijos pr. 9, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6910476,
+      "lon": 21.1770949
+    },
+    {
+      "id": "a_6f8bb5d7e16f6b73",
+      "adresas": "Baltijos pr. 19, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6891155,
+      "lon": 21.1765784
+    },
+    {
+      "id": "a_4c3fb27ed7f15219",
+      "adresas": "Baltijos pr. 23, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6905841,
+      "lon": 21.1754615
+    },
+    {
+      "id": "a_a79bb4015adcfcc4",
+      "adresas": "Baltijos pr. 25, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6904155,
+      "lon": 21.1745281
+    },
+    {
+      "id": "a_7d9de72f3cb07711",
+      "adresas": "Baltijos pr. 27, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6894048,
+      "lon": 21.1752406
+    },
+    {
+      "id": "a_892335d888f7fd3d",
+      "adresas": "Baltijos pr. 35, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6894741,
+      "lon": 21.1744531
+    },
+    {
+      "id": "a_7b51ffdd585b8f08",
+      "adresas": "Baltijos pr. 37, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6900302,
+      "lon": 21.1739182
+    },
+    {
+      "id": "a_f0ae0525574a5bcf",
+      "adresas": "Baltijos pr. 41, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6888257,
+      "lon": 21.1737132
+    },
+    {
+      "id": "a_2b1dec7b74f4b95f",
+      "adresas": "Baltijos pr. 43, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6878883,
+      "lon": 21.1746037
+    },
+    {
+      "id": "a_073055c36afe5181",
+      "adresas": "Baltijos pr. 47, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6888947,
+      "lon": 21.1728137
+    },
+    {
+      "id": "a_9e3f701f8d219aee",
+      "adresas": "Baltijos pr. 59, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6867447,
+      "lon": 21.1672243
+    },
+    {
+      "id": "a_93068586bfffdbe3",
+      "adresas": "Baltijos pr. 61, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6859406,
+      "lon": 21.167791
+    },
+    {
+      "id": "a_4d633954cc728e2b",
+      "adresas": "Baltijos pr. 69, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6874427,
+      "lon": 21.1660267
+    },
+    {
+      "id": "a_26236e2a44608333",
+      "adresas": "Baltijos pr. 79, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.685505,
+      "lon": 21.1649868
+    },
+    {
+      "id": "a_5103999bf7dbfb57",
+      "adresas": "Baltijos pr. 81, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6865122,
+      "lon": 21.1645061
+    },
+    {
+      "id": "a_1ae486756d6717e2",
+      "adresas": "Baltijos pr. 83, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6870732,
+      "lon": 21.1641937
+    },
+    {
+      "id": "a_ffae835d2eca8ad1",
+      "adresas": "Baltijos pr. 87, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6869086,
+      "lon": 21.1631375
+    },
+    {
+      "id": "a_f5181bf3cc690f74",
+      "adresas": "Baltijos pr. 91, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6851268,
+      "lon": 21.1642258
+    },
+    {
+      "id": "a_1dc32999fc1dc72e",
+      "adresas": "Baltijos pr. 93, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6847092,
+      "lon": 21.1636561
+    },
+    {
+      "id": "a_479c81a86f8b80db",
+      "adresas": "Baltijos pr. 95, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6857344,
+      "lon": 21.163103
+    },
+    {
+      "id": "a_7154730054dfef4a",
+      "adresas": "Baltijos pr. 99, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.686114,
+      "lon": 21.1617437
+    },
+    {
+      "id": "a_3a16020558f7ec62",
+      "adresas": "Debreceno g. 6, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6874117,
+      "lon": 21.1802767
+    },
+    {
+      "id": "a_a82e2c201cece4bc",
+      "adresas": "Debreceno g. 14, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6868934,
+      "lon": 21.1797023
+    },
+    {
+      "id": "a_6e19b30c6679c8a6",
+      "adresas": "Debreceno g. 16, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6875067,
+      "lon": 21.1791217
+    },
+    {
+      "id": "a_2bdafc038486cce8",
+      "adresas": "Debreceno g. 20, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6864215,
+      "lon": 21.1794227
+    },
+    {
+      "id": "a_ac436ab47799a0d5",
+      "adresas": "Debreceno g. 20A, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6869054,
+      "lon": 21.1789769
+    },
+    {
+      "id": "a_ac427eb7603f7c98",
+      "adresas": "Debreceno g. 28, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6865404,
+      "lon": 21.1779691
+    },
+    {
+      "id": "a_b3350275737983dc",
+      "adresas": "Debreceno g. 30, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6870375,
+      "lon": 21.1774928
+    },
+    {
+      "id": "a_c23b9747ca5c9145",
+      "adresas": "Debreceno g. 32, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6866696,
+      "lon": 21.1768628
+    },
+    {
+      "id": "a_744ef5c5f12162a5",
+      "adresas": "Debreceno g. 34, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.686015,
+      "lon": 21.1777488
+    },
+    {
+      "id": "a_ac10391003f00a82",
+      "adresas": "Debreceno g. 36, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6851954,
+      "lon": 21.1785307
+    },
+    {
+      "id": "a_56c641df22750684",
+      "adresas": "Debreceno g. 40, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6858886,
+      "lon": 21.1765276
+    },
+    {
+      "id": "a_fd2cceca0a264b32",
+      "adresas": "Debreceno g. 44, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6856704,
+      "lon": 21.1759834
+    },
+    {
+      "id": "a_0868869153f65c93",
+      "adresas": "Debreceno g. 46, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6847519,
+      "lon": 21.1768729
+    },
+    {
+      "id": "a_43f757f418f2f0c4",
+      "adresas": "Debreceno g. 56, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6838839,
+      "lon": 21.1702573
+    },
+    {
+      "id": "a_2f0cbc62763b4de7",
+      "adresas": "Debreceno g. 58, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6842963,
+      "lon": 21.1695367
+    },
+    {
+      "id": "a_4a6bddc6df186006",
+      "adresas": "Debreceno g. 58B, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6844795,
+      "lon": 21.1706568
+    },
+    {
+      "id": "a_485d9af1bab6bafb",
+      "adresas": "Debreceno g. 60, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6837808,
+      "lon": 21.1692337
+    },
+    {
+      "id": "a_919071bef745383a",
+      "adresas": "Debreceno g. 62, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6833187,
+      "lon": 21.170027
+    },
+    {
+      "id": "a_1cfd21d2ff33229b",
+      "adresas": "Debreceno g. 64, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.682916,
+      "lon": 21.170734
+    },
+    {
+      "id": "a_5e09bdc8123e6130",
+      "adresas": "Debreceno g. 66, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6824053,
+      "lon": 21.1701624
+    },
+    {
+      "id": "a_0d5412ac7ccf809e",
+      "adresas": "Debreceno g. 72, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6837943,
+      "lon": 21.1678393
+    },
+    {
+      "id": "a_e7af76d9bb1cc791",
+      "adresas": "Debreceno g. 74, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6837256,
+      "lon": 21.1668266
+    },
+    {
+      "id": "a_139c4a117e5ebdae",
+      "adresas": "Debreceno g. 76, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.682794,
+      "lon": 21.168366
+    },
+    {
+      "id": "a_5b4697fefc3eb02b",
+      "adresas": "Debreceno g. 82, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6823843,
+      "lon": 21.1676868
+    },
+    {
+      "id": "a_1a31025b4768293c",
+      "adresas": "Debreceno g. 86, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6833024,
+      "lon": 21.1661469
+    },
+    {
+      "id": "a_f188a401c424a7ef",
+      "adresas": "Šilutės pl. 42, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6879343,
+      "lon": 21.1807628
+    },
+    {
+      "id": "a_bef63d1bb85bc55c",
+      "adresas": "Šilutės pl. 44, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6872521,
+      "lon": 21.1814135
+    },
+    {
+      "id": "a_01bebfc4dd6bd610",
+      "adresas": "Taikos pr. 71, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6859562,
+      "lon": 21.1609245
+    },
+    {
+      "id": "a_a87d1dc3ba596ed6",
+      "adresas": "Taikos pr. 73, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6852351,
+      "lon": 21.1614124
+    },
+    {
+      "id": "a_c1a41f36558c24aa",
+      "adresas": "Taikos pr. 77, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6844874,
+      "lon": 21.1626851
+    },
+    {
+      "id": "a_fd27f5ecfc273422",
+      "adresas": "Debreceno g. 18, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6873884,
+      "lon": 21.1782033
+    },
+    {
+      "id": "a_fd2cceca0a264b32",
+      "adresas": "Debreceno g. 44, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6856704,
+      "lon": 21.1759834
+    },
+    {
+      "id": "a_b351407b37364039",
+      "adresas": "Debreceno g. 58C, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6838778,
+      "lon": 21.1714265
+    },
+    {
+      "id": "a_5488bdd583927b27",
+      "adresas": "Šilutės pl. 44 , Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6872521,
+      "lon": 21.1814135
+    },
+    {
+      "id": "a_a0e1e556208e982e",
+      "adresas": "Šilutės pl. 36, Klaipėda",
+      "technikas": "Jurijus Laškovas",
+      "tel": "+37064045839",
+      "lat": 55.6895334,
+      "lon": 21.1792794
+    }
+  ]
+}
