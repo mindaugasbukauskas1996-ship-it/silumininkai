@@ -159,7 +159,8 @@
       </div>
       <div>
         <label for="q">Paieška (adresas / technikas / tel.)</label>
-        <input id="q" type="search" placeholder="Pvz. Alksnynės 5 arba Arūnas" />
+        <input id="q" type="search" placeholder="Pvz. Alksnynės 5 arba Arūnas" list="addrList" autocomplete="off" />
+        <datalist id="addrList"></datalist>
       </div>
       <div>
         <label for="mode">Režimas</label>
@@ -238,20 +239,57 @@
     const logoutBtn = document.getElementById('logout');
 
     // Map init
-    const map = L.map('map', { zoomControl: true, preferCanvas: true }).setView([55.7033, 21.1443], 12);
+    const map = L.map('map', { zoomControl: true, preferCanvas: true }).setView([55.7033, 21.1443], 10);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors',
       maxZoom: 19
     }).addTo(map);
 
-    // Cluster group
-    const cluster = L.markerClusterGroup({
-      showCoverageOnHover: false,
-      spiderfyOnMaxZoom: true,
-      disableClusteringAtZoom: 18
-    });
-    map.addLayer(cluster);
+    // Cluster groups (one per technikas, to avoid mixed clustering)
+    const TECH_CLUSTER_GROUPS = {}; // key -> L.markerClusterGroup
 
+    function makeClusterIcon(color, count) {
+      // Simple colored circle with count
+      const html = `<div style="
+          width:44px;height:44px;border-radius:999px;
+          background:${color};color:#fff;
+          display:flex;align-items:center;justify-content:center;
+          font-weight:700;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+          border:3px solid rgba(255,255,255,0.9);
+          box-shadow:0 6px 18px rgba(0,0,0,0.22);
+        ">${count}</div>`;
+      return L.divIcon({ html, className: "", iconSize: [44,44] });
+    }
+
+    function ensureCluster(key, color) {
+      if (TECH_CLUSTER_GROUPS[key]) return TECH_CLUSTER_GROUPS[key];
+      const g = L.markerClusterGroup({
+        showCoverageOnHover: false,
+        spiderfyOnMaxZoom: true,
+        disableClusteringAtZoom: 18,
+        iconCreateFunction: function (cl) {
+          return makeClusterIcon(color, cl.getChildCount());
+        }
+      });
+      TECH_CLUSTER_GROUPS[key] = g;
+      map.addLayer(g);
+      return g;
+    }
+
+    function clearAllClusters() {
+      for (const k of Object.keys(TECH_CLUSTER_GROUPS)) {
+        TECH_CLUSTER_GROUPS[k].clearLayers();
+      }
+    }
+
+    function setActiveClusterKeys(keys) {
+      const keySet = new Set(keys);
+      for (const [k, g] of Object.entries(TECH_CLUSTER_GROUPS)) {
+        const shouldShow = keySet.has(k);
+        if (shouldShow && !map.hasLayer(g)) map.addLayer(g);
+        if (!shouldShow && map.hasLayer(g)) map.removeLayer(g);
+      }
+    }
     // UI
     const techSelect = document.getElementById('tech');
     const qInput = document.getElementById('q');
@@ -303,6 +341,18 @@
       for (let i=0; i<technikas.length; i++) h = (h*31 + technikas.charCodeAt(i)) >>> 0;
       const hue = h % 360;
       return `hsl(${hue}, 70%, 45%)`;
+    }
+
+    function clusterKeyFor(item) {
+      const t = (item.technikas || "").trim();
+      if (t === "Dimitrj Ryžkov") {
+        // Force two separate clusters: Palanga vs Klaipėda.
+        // Heuristic split by latitude (Palanga is north of Klaipėda).
+        const lat = Number(item.lat);
+        if (!Number.isFinite(lat)) return "Dimitrj Ryžkov|Klaipėda";
+        return (lat >= 55.82) ? "Dimitrj Ryžkov|Palanga" : "Dimitrj Ryžkov|Klaipėda";
+      }
+      return t || "__NO_TECH__";
     }
 
     function openAdminModal() {
@@ -401,7 +451,7 @@
     }
 
     function rebuildMarkers() {
-      cluster.clearLayers();
+      clearAllClusters();
       LAYERS = [];
 
       let bounds = L.latLngBounds();
@@ -409,7 +459,11 @@
       for (const item of ALL_DOCS) {
         if (!item.lat || !item.lon) continue;
 
-        const c = colorFor(item.technikas || "");
+        const technikas = (item.technikas || "").trim();
+        const c = colorFor(technikas || "");
+        const key = clusterKeyFor(item);
+        const group = ensureCluster(key, c);
+
         const marker = L.circleMarker([item.lat, item.lon], {
           radius: 7,
           color: c,
@@ -422,14 +476,14 @@
         marker.bindPopup(() => {
           const base = `
             <b>${item.adresas || ""}</b><br>
-            Technikas: ${item.technikas || ""}<br>
+            Technikas: ${technikas || ""}<br>
             ${telHtml}
           `;
           if (!auth.currentUser || modeSelect.value !== "admin") return base;
 
           // Admin controls inside popup
           const techOptions = Array.from(new Set(ALL_DOCS.map(d => d.technikas).filter(Boolean))).sort()
-            .map(t => `<option value="${t}" ${t===item.technikas ? "selected":""}>${t}</option>`)
+            .map(t => `<option value="${t}" ${t===technikas ? "selected":""}>${t}</option>`)
             .join("");
 
           return `
@@ -484,8 +538,8 @@
           }
         });
 
-        cluster.addLayer(marker);
-        LAYERS.push({ id: item.id, item, layer: marker });
+        group.addLayer(marker);
+        LAYERS.push({ id: item.id, item, layer: marker, key });
         bounds.extend([item.lat, item.lon]);
       }
 
@@ -497,7 +551,9 @@
       const tech = techSelect.value;
       const q = (qInput.value || "").trim().toLowerCase();
 
-      cluster.clearLayers();
+      clearAllClusters();
+      const activeKeys = new Set();
+
       let bounds = L.latLngBounds();
       let count = 0;
 
@@ -511,10 +567,17 @@
           if (!hay.includes(q)) continue;
         }
 
-        cluster.addLayer(entry.layer);
+        const technikas = (item.technikas || "").trim();
+        const c = colorFor(technikas || "");
+        const group = ensureCluster(entry.key, c);
+        group.addLayer(entry.layer);
+        activeKeys.add(entry.key);
+
         bounds.extend([item.lat, item.lon]);
         count++;
       }
+
+      setActiveClusterKeys(activeKeys);
 
       countEl.textContent = "Taškų: " + count;
 
@@ -523,19 +586,67 @@
 
     techSelect.addEventListener('change', () => applyFilters(true));
     qInput.addEventListener('input', () => {
+      // Suggest addresses (dropdown)
+      const dl = document.getElementById('addrList');
+      const qRaw = (qInput.value || "").trim().toLowerCase();
+      dl.innerHTML = "";
+
+      if (qRaw.length >= 2) {
+        const matches = [];
+        for (const d of ALL_DOCS) {
+          const addr = (d.adresas || "").trim();
+          if (!addr) continue;
+          if (addr.toLowerCase().includes(qRaw)) matches.push(addr);
+          if (matches.length >= 12) break;
+        }
+        // Deduplicate & render
+        const uniq = Array.from(new Set(matches));
+        for (const a of uniq) {
+          const opt = document.createElement('option');
+          opt.value = a;
+          dl.appendChild(opt);
+        }
+      }
+
       window.clearTimeout(window.__t);
       window.__t = window.setTimeout(() => applyFilters(false), 180);
+    });
+
+    qInput.addEventListener('change', () => {
+      // If user picked an address from dropdown -> zoom to it and open popup
+      const v = (qInput.value || "").trim();
+      if (!v) return;
+
+      const found = LAYERS.find(x => (x.item.adresas || "").trim() === v);
+      if (!found) return;
+
+      // Show only selected marker (but keep current tech filter)
+      applyFilters(false);
+
+      map.setView([found.item.lat, found.item.lon], Math.max(map.getZoom(), 17));
+      setTimeout(() => found.layer.openPopup(), 150);
     });
 
     document.getElementById('fit').addEventListener('click', () => {
       techSelect.value = "__ALL__";
       qInput.value = "";
       countEl.textContent = "Taškų: " + ALL_DOCS.length;
-      cluster.clearLayers();
-      for (const entry of LAYERS) cluster.addLayer(entry.layer);
-      // fit
+
+      clearAllClusters();
+      const activeKeys = new Set();
       let bounds = L.latLngBounds();
-      for (const entry of LAYERS) bounds.extend([entry.item.lat, entry.item.lon]);
+
+      for (const entry of LAYERS) {
+        const technikas = (entry.item.technikas || "").trim();
+        const c = colorFor(technikas || "");
+        const group = ensureCluster(entry.key, c);
+        group.addLayer(entry.layer);
+        activeKeys.add(entry.key);
+        bounds.extend([entry.item.lat, entry.item.lon]);
+      }
+
+      setActiveClusterKeys(activeKeys);
+
       if (bounds.isValid()) map.fitBounds(bounds.pad(0.12));
     });
 
