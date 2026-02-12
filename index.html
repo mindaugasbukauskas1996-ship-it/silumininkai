@@ -13,6 +13,7 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 
   <!-- Firebase (compat for simple setup) -->
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
@@ -137,6 +138,56 @@
     display: none;
   }
 
+
+    /* Technician marker (single point) */
+    .tech-marker-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      border: 2px solid rgba(255,255,255,0.92);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+      letter-spacing: 0.5px;
+      user-select: none;
+    }
+    .tech-marker-icon span {
+      font-size: 12px;
+      line-height: 1;
+    }
+
+    /* Technician cluster (per technician) */
+    .tech-cluster-icon-wrap{
+      width: 46px;
+      height: 46px;
+      border-radius: 999px;
+      display:flex;
+      flex-direction: column;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      border:3px solid rgba(255,255,255,0.92);
+      box-shadow:0 6px 18px rgba(0,0,0,0.22);
+      user-select:none;
+    }
+    .tech-cluster-icon-wrap .init{
+      font-weight: 900;
+      font-size: 12px;
+      line-height: 1.05;
+    }
+    .tech-cluster-icon-wrap .cnt{
+      font-weight: 900;
+      font-size: 13px;
+      line-height: 1.0;
+      margin-top: 1px;
+      opacity: 0.95;
+    }
+
 </style>
 </head>
 <body>
@@ -174,6 +225,7 @@
     <div class="btns">
       <button id="fit">Rodyti visus taškus</button>
       <button id="locate" class="secondary">Mano vieta</button>
+      <button id="exportXlsx" class="secondary">Eksportuoti Excel</button>
       <button id="logout" class="secondary" style="display:none;">Atsijungti (admin)</button>
     </div>
 
@@ -248,8 +300,9 @@
     // Cluster groups (one per technikas, to avoid mixed clustering)
     const TECH_CLUSTER_GROUPS = {}; // key -> L.markerClusterGroup
 
-    function makeClusterIcon(technikasName, color, count) {
-      // Colored circle with count. Add a small deterministic offset per technikas so
+    
+    function makeClusterIcon(technikasName, color, initials, count) {
+      // Per-technician cluster icon. Add a small deterministic offset per technikas so
       // different technicians' clusters don't visually stack on top of each other.
       let h = 0;
       const s = String(technikasName || "");
@@ -257,16 +310,20 @@
       const dx = (h % 17) - 8;              // -8..8
       const dy = ((h >>> 8) % 17) - 8;      // -8..8
 
-      const html = `<div style="
-          width:44px;height:44px;border-radius:999px;
-          background:${color};color:#fff;
-          display:flex;align-items:center;justify-content:center;
-          font-weight:700;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
-          border:3px solid rgba(255,255,255,0.92);
-          box-shadow:0 6px 18px rgba(0,0,0,0.22);
-          transform: translate(${dx}px, ${dy}px);
-        ">${count}</div>`;
-      return L.divIcon({ html, className: "tech-cluster-icon", iconSize: [44,44] });
+      const html = `
+        <div class="tech-cluster-icon-wrap" style="background:${color}; transform: translate(${dx}px, ${dy}px);">
+          <div class="init">${initials || ""}</div>
+          <div class="cnt">${count}</div>
+        </div>
+      `;
+      return L.divIcon({ html, className: "tech-cluster-icon", iconSize: [46,46] });
+    }
+
+
+    function makeTechMarkerIcon(technikasName, color) {
+      const init = initialsFor(technikasName);
+      const html = `<div class="tech-marker-icon" style="background:${color};"><span>${init}</span></div>`;
+      return L.divIcon({ html, className: "tech-marker", iconSize: [30,30], iconAnchor: [15,15] });
     }
 
     function ensureCluster(key, technikasName) {
@@ -280,7 +337,7 @@
         spiderfyOnMaxZoom: true,
         disableClusteringAtZoom: 18,
         iconCreateFunction: function (cl) {
-          return makeClusterIcon(baseTech, colorFor(baseTech), cl.getChildCount());
+          return makeClusterIcon(baseTech, colorFor(baseTech), initialsFor(baseTech), cl.getChildCount());
         }
       });
 
@@ -346,14 +403,50 @@
     let LAYERS = [];             // {id, item, layer}
     let IS_ADMIN = false;
 
+    let TECH_ORDER = [];         // stable sorted order of technicians (for palette assignment)
+
+    // High-contrast qualitative palette (Tableau + extra distinct hues)
+    const DISTINCT_PALETTE = [
+      "#4E79A7","#F28E2B","#E15759","#76B7B2","#59A14F","#EDC948",
+      "#B07AA1","#FF9DA7","#9C755F","#BAB0AC",
+      "#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B",
+      "#E377C2","#7F7F7F","#BCBD22","#17BECF"
+    ];
+
+    function initialsFor(fullName) {
+      const s = String(fullName || "").trim();
+      if (!s) return "";
+      const parts = s.split(/\s+/).filter(Boolean);
+      const first = parts[0] || "";
+      const last = parts.length > 1 ? parts[parts.length - 1] : "";
+      const a = first ? first[0] : "";
+      const b = last ? last[0] : (first.length > 1 ? first[1] : "");
+      return (a + b).toUpperCase();
+    }
+
+
     // Helpers
+    
     function colorFor(technikas) {
-      if (TECH_COLORS[technikas]) return TECH_COLORS[technikas];
-      // stable fallback color
+      const t = String(technikas || "").trim();
+      if (!t) return "#4E79A7";
+      if (TECH_COLORS[t]) return TECH_COLORS[t];
+
+      // Prefer palette assignment based on TECH_ORDER index (ensures maximal separation for visible set)
+      const i = TECH_ORDER.indexOf(t);
+      if (i >= 0) {
+        const col = DISTINCT_PALETTE[i % DISTINCT_PALETTE.length];
+        TECH_COLORS[t] = col;
+        return col;
+      }
+
+      // Fallback: golden-angle HSL (still high contrast)
       let h = 0;
-      for (let i=0; i<technikas.length; i++) h = (h*31 + technikas.charCodeAt(i)) >>> 0;
-      const hue = h % 360;
-      return `hsl(${hue}, 70%, 45%)`;
+      for (let k = 0; k < t.length; k++) h = (h * 31 + t.charCodeAt(k)) >>> 0;
+      const hue = (h * 137.508) % 360;
+      const col = `hsl(${hue}, 78%, 44%)`;
+      TECH_COLORS[t] = col;
+      return col;
     }
 
     function clusterKeyFor(item) {
@@ -449,15 +542,33 @@
 
     function rebuildTechFilter() {
       const current = techSelect.value;
+
+      // Count addresses per technician (total assigned)
+      const counts = {};
+      for (const d of ALL_DOCS) {
+        const t = (d.technikas || "").trim();
+        if (!t) continue;
+        counts[t] = (counts[t] || 0) + 1;
+      }
+
       // Clear options except first
       techSelect.innerHTML = '<option value="__ALL__">Visi technikai</option>';
       const techs = Array.from(new Set(ALL_DOCS.map(d => d.technikas).filter(Boolean))).sort();
+      TECH_ORDER = techs;
+
+      // Ensure every visible technician gets a distinct palette color (unless already configured in Firestore)
+      for (let i = 0; i < techs.length; i++) {
+        const t = techs[i];
+        if (!TECH_COLORS[t]) TECH_COLORS[t] = DISTINCT_PALETTE[i % DISTINCT_PALETTE.length];
+      }
+
       for (const t of techs) {
         const opt = document.createElement('option');
         opt.value = t;
-        opt.textContent = t;
+        opt.textContent = `${t} (${counts[t] || 0})`;
         techSelect.appendChild(opt);
       }
+
       // restore selection if possible
       const exists = Array.from(techSelect.options).some(o => o.value === current);
       techSelect.value = exists ? current : "__ALL__";
@@ -477,12 +588,8 @@
         const key = clusterKeyFor(item);
         const group = ensureCluster(key, technikas);
 
-        const marker = L.circleMarker([item.lat, item.lon], {
-          radius: 7,
-          color: c,
-          fillColor: c,
-          fillOpacity: 0.9,
-          weight: 2
+        const marker = L.marker([item.lat, item.lon], {
+          icon: makeTechMarkerIcon(technikas, c)
         });
 
         const telHtml = item.tel ? (`Tel: <a href="tel:${item.tel}">${item.tel}</a>`) : "";
@@ -596,6 +703,76 @@
 
       if (autoFit && count > 0 && bounds.isValid()) map.fitBounds(bounds.pad(0.15));
     }
+
+    function getFilteredDocsForExport() {
+      const tech = techSelect.value;
+      const q = (qInput.value || "").trim().toLowerCase();
+
+      const out = [];
+      for (const entry of LAYERS) {
+        const item = entry.item;
+
+        if (tech !== "__ALL__" && item.technikas !== tech) continue;
+
+        if (q) {
+          const hay = `${item.adresas || ""} ${item.technikas || ""} ${item.tel || ""}`.toLowerCase();
+          if (!hay.includes(q)) continue;
+        }
+
+        out.push(item);
+      }
+
+      // Sort for nicer Excel
+      out.sort((a,b) => {
+        const ta = (a.technikas||"").localeCompare((b.technikas||""), "lt");
+        if (ta !== 0) return ta;
+        return (a.adresas||"").localeCompare((b.adresas||""), "lt");
+      });
+
+      return out;
+    }
+
+    document.getElementById('exportXlsx').addEventListener('click', () => {
+      if (typeof XLSX === "undefined") {
+        alert("Excel eksportui nepavyko užkrauti XLSX bibliotekos. Patikrink interneto ryšį.");
+        return;
+      }
+
+      const docs = getFilteredDocsForExport();
+      if (!docs.length) {
+        alert("Nėra duomenų eksportui pagal pasirinktus filtrus.");
+        return;
+      }
+
+      const rows = docs.map(d => ({
+        "Technikas": (d.technikas || "").trim(),
+        "Adresas": (d.adresas || "").trim(),
+        "Telefonas": (d.tel || "").trim(),
+        "Lat": d.lat ?? "",
+        "Lon": d.lon ?? ""
+      }));
+
+      const ws = XLSX.utils.json_to_sheet(rows, { skipHeader: false });
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, "Adresai");
+
+      // Column widths (approx)
+      ws["!cols"] = [
+        { wch: 22 }, // Technikas
+        { wch: 40 }, // Adresas
+        { wch: 16 }, // Telefonas
+        { wch: 10 }, // Lat
+        { wch: 10 }  // Lon
+      ];
+
+      const d = new Date();
+      const yyyy = d.getFullYear();
+      const mm = String(d.getMonth()+1).padStart(2,"0");
+      const dd = String(d.getDate()).padStart(2,"0");
+      const fname = `silumininkai_${yyyy}-${mm}-${dd}.xlsx`;
+
+      XLSX.writeFile(wb, fname);
+    });
 
     techSelect.addEventListener('change', () => applyFilters(true));
     qInput.addEventListener('input', () => {
